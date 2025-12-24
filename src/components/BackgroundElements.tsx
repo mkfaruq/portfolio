@@ -13,10 +13,10 @@ const BackgroundElements = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-visible z-[1]">
+    <div className="fixed inset-0 pointer-events-none overflow-visible -z-10">
       {/* Concentric circles - top left */}
       <svg
-        className="absolute top-[5%] left-[3%] w-32 h-32 opacity-[0.025] animate-float-slow"
+        className="absolute top-[5%] left-[3%] w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 opacity-[0.02] animate-float-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
@@ -30,7 +30,7 @@ const BackgroundElements = () => {
 
       {/* Triangle - top right - with rotation */}
       <svg
-        className="absolute top-[8%] right-[6%] w-36 h-36 opacity-[0.02] animate-spin-slow"
+        className="absolute top-[8%] right-[6%] w-16 h-16 sm:w-24 sm:h-24 md:w-36 md:h-36 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '45s' }}
@@ -43,7 +43,7 @@ const BackgroundElements = () => {
 
       {/* Star - middle left - with rotation */}
       <svg
-        className="absolute top-[32%] left-[2%] w-28 h-28 opacity-[0.03] animate-spin-slow"
+        className="absolute top-[32%] left-[2%] w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '60s' }}
@@ -61,7 +61,7 @@ const BackgroundElements = () => {
 
       {/* Square/Diamond - top center - with rotation */}
       <svg
-        className="absolute top-[3%] left-[38%] w-24 h-24 opacity-[0.025] animate-spin-slow"
+        className="absolute top-[3%] left-[38%] w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '50s' }}
@@ -74,7 +74,7 @@ const BackgroundElements = () => {
 
       {/* Concentric squares - middle right */}
       <svg
-        className="absolute top-[42%] right-[4%] w-40 h-40 opacity-[0.02] animate-pulse-slow"
+        className="absolute top-[42%] right-[4%] w-20 h-20 sm:w-28 sm:h-28 md:w-40 md:h-40 opacity-[0.02] animate-pulse-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.08}px)` }}
@@ -88,7 +88,7 @@ const BackgroundElements = () => {
 
       {/* Hexagon - bottom left - with rotation */}
       <svg
-        className="absolute bottom-[18%] left-[5%] w-32 h-32 opacity-[0.03] animate-spin-slow"
+        className="absolute bottom-[18%] left-[5%] w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '55s', animationDirection: 'reverse' }}
@@ -101,7 +101,7 @@ const BackgroundElements = () => {
 
       {/* Large star - bottom right - with rotation */}
       <svg
-        className="absolute bottom-[8%] right-[3%] w-44 h-44 opacity-[0.025] animate-spin-slow"
+        className="absolute bottom-[8%] right-[3%] w-20 h-20 sm:w-32 sm:h-32 md:w-44 md:h-44 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '70s' }}
@@ -123,7 +123,7 @@ const BackgroundElements = () => {
 
       {/* Cross/Plus - scattered */}
       <svg
-        className="absolute top-[22%] right-[28%] w-16 h-16 opacity-[0.02] animate-float"
+        className="absolute top-[22%] right-[28%] w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 opacity-[0.02] animate-float"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.12}px)` }}
@@ -135,7 +135,7 @@ const BackgroundElements = () => {
 
       {/* Triangle - middle - with rotation */}
       <svg
-        className="absolute top-[58%] left-[22%] w-20 h-20 opacity-[0.025] animate-spin-slow"
+        className="absolute top-[58%] left-[22%] w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '40s', animationDirection: 'reverse' }}
@@ -147,7 +147,7 @@ const BackgroundElements = () => {
 
       {/* Pentagon - right side - with rotation */}
       <svg
-        className="absolute top-[72%] right-[20%] w-18 h-18 opacity-[0.03] animate-spin-slow"
+        className="absolute top-[72%] right-[20%] w-10 h-10 sm:w-14 sm:h-14 md:w-18 md:h-18 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '65s' }}
@@ -159,7 +159,7 @@ const BackgroundElements = () => {
 
       {/* Concentric circles - center bottom */}
       <svg
-        className="absolute bottom-[5%] left-[42%] w-32 h-32 opacity-[0.02] animate-float"
+        className="absolute bottom-[5%] left-[42%] w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 opacity-[0.02] animate-float"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * -0.08}px)` }}
@@ -173,7 +173,7 @@ const BackgroundElements = () => {
 
       {/* Diamond - upper left - with rotation */}
       <svg
-        className="absolute top-[28%] left-[18%] w-16 h-16 opacity-[0.025] animate-spin-slow"
+        className="absolute top-[28%] left-[18%] w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '35s', animationDirection: 'reverse' }}
@@ -185,7 +185,7 @@ const BackgroundElements = () => {
 
       {/* Star - center - with rotation */}
       <svg
-        className="absolute top-[52%] left-[48%] w-14 h-14 opacity-[0.02] animate-spin-slow"
+        className="absolute top-[52%] left-[48%] w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '50s' }}
@@ -199,7 +199,7 @@ const BackgroundElements = () => {
 
       {/* Hexagon - upper right */}
       <svg
-        className="absolute top-[15%] left-[58%] w-18 h-18 opacity-[0.03] animate-float-reverse"
+        className="absolute top-[15%] left-[58%] w-10 h-10 sm:w-14 sm:h-14 md:w-18 md:h-18 opacity-[0.02] animate-float-reverse"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.18}px)` }}
@@ -211,7 +211,7 @@ const BackgroundElements = () => {
 
       {/* Small triangles scattered - with rotation */}
       <svg
-        className="absolute top-[68%] left-[8%] w-12 h-12 opacity-[0.025] animate-spin-slow"
+        className="absolute top-[68%] left-[8%] w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '30s' }}
@@ -221,7 +221,7 @@ const BackgroundElements = () => {
       </svg>
 
       <svg
-        className="absolute top-[12%] right-[35%] w-10 h-10 opacity-[0.02] animate-spin-slow"
+        className="absolute top-[12%] right-[35%] w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '25s', animationDirection: 'reverse' }}
@@ -232,7 +232,7 @@ const BackgroundElements = () => {
 
       {/* Small squares - with rotation */}
       <svg
-        className="absolute bottom-[32%] right-[12%] w-14 h-14 opacity-[0.025] animate-spin-slow"
+        className="absolute bottom-[32%] right-[12%] w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '40s', animationDirection: 'reverse' }}
@@ -243,7 +243,7 @@ const BackgroundElements = () => {
       </svg>
 
       <svg
-        className="absolute top-[38%] left-[32%] w-12 h-12 opacity-[0.02] animate-spin-slow"
+        className="absolute top-[38%] left-[32%] w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ animationDuration: '35s' }}
@@ -254,19 +254,19 @@ const BackgroundElements = () => {
 
       {/* Glowing orbs */}
       <div 
-        className="absolute top-[18%] right-[42%] w-6 h-6 rounded-full opacity-[0.025] blur-md animate-pulse-slow"
+        className="absolute top-[18%] right-[42%] w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 rounded-full opacity-[0.02] blur-md animate-pulse-slow"
         style={{ backgroundColor: '#EBD448', transform: `translateY(${scrollY * 0.1}px)` }}
       />
       <div 
-        className="absolute bottom-[28%] left-[38%] w-5 h-5 rounded-full opacity-[0.02] blur-md animate-float"
+        className="absolute bottom-[28%] left-[38%] w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 md:w-5 md:h-5 rounded-full opacity-[0.02] blur-md animate-float"
         style={{ backgroundColor: '#2CC5BE', animationDelay: '2s', transform: `translateY(${scrollY * -0.12}px)` }}
       />
       <div 
-        className="absolute top-[48%] left-[55%] w-4 h-4 rounded-full opacity-[0.03] blur-md animate-float-reverse"
+        className="absolute top-[48%] left-[55%] w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full opacity-[0.02] blur-md animate-float-reverse"
         style={{ backgroundColor: '#E94381', transform: `translateY(${scrollY * 0.08}px)` }}
       />
       <div 
-        className="absolute top-[75%] right-[38%] w-5 h-5 rounded-full opacity-[0.025] blur-md animate-pulse-slow"
+        className="absolute top-[75%] right-[38%] w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 md:w-5 md:h-5 rounded-full opacity-[0.02] blur-md animate-pulse-slow"
         style={{ backgroundColor: '#FFFFFF', animationDelay: '1s', transform: `translateY(${scrollY * -0.1}px)` }}
       />
     </div>
