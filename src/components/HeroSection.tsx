@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Eye } from "lucide-react";
+import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Eye, Mail } from "lucide-react";
 import profileImage from "@/assets/profile-new.jpg";
 
 const HeroSection = () => {
@@ -54,6 +54,13 @@ const HeroSection = () => {
                 <Facebook size={20} />
               </a>
               <a 
+                href="mailto:mkfaruqhossain@gmail.com" 
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[3000ms] ease-in-out btn-3d"
+                aria-label="Email"
+              >
+                <Mail size={20} />
+              </a>
+              <a 
                 href="https://wa.me/8801750005162" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -72,7 +79,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
-                <Eye size={18} />
+                <Eye size={22} strokeWidth={2.5} />
                 View Resume
               </a>
               <a 
