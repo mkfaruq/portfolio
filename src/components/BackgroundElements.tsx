@@ -1,6 +1,6 @@
 const BackgroundElements = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+    <div className="fixed inset-0 pointer-events-none overflow-visible z-[1]">
       {/* Floating circles - top left */}
       <svg
         className="absolute top-[8%] left-[5%] w-28 h-28 text-accent/30 animate-float-slow drop-shadow-[0_0_15px_hsl(var(--accent)/0.5)]"
