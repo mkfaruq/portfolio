@@ -27,7 +27,7 @@ const HeroSection = () => {
             {/* Social links */}
             <div className="flex items-center gap-3 mb-8 flex-wrap">
               <a 
-                href="https://linkedin.com/in/faruq" 
+                href="https://www.linkedin.com/in/mkfaruq"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
