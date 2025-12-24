@@ -1,9 +1,9 @@
-import { ArrowDown, Dribbble, Youtube, Figma } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import { ArrowDown, Dribbble, Youtube, Figma, Download } from "lucide-react";
+import profileImage from "@/assets/profile.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 pt-28 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
@@ -25,7 +25,7 @@ const HeroSection = () => {
             </p>
             
             {/* Social links */}
-            <div className="flex items-center gap-4 mb-10">
+            <div className="flex items-center gap-4 mb-8">
               <a 
                 href="https://dribbble.com/mkfaruq" 
                 target="_blank" 
@@ -52,16 +52,26 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* CTA */}
-            <a 
-              href="#projects"
-              className="inline-flex items-center gap-3 text-foreground font-medium group"
-            >
-              <span className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
-                <ArrowDown size={18} className="animate-bounce" />
-              </span>
-              <span className="group-hover:text-accent transition-colors">View my work</span>
-            </a>
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center gap-4">
+              <a 
+                href="/Faruq_Hossain_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-glow"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
+              <a 
+                href="#projects"
+                className="inline-flex items-center gap-3 text-foreground font-medium group"
+              >
+                <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                  <ArrowDown size={18} className="animate-bounce" />
+                </span>
+                <span className="group-hover:text-accent transition-colors">View my work</span>
+              </a>
+            </div>
           </div>
 
           {/* Profile image */}
