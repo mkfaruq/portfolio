@@ -28,68 +28,80 @@ const SkillsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Design Tools */}
-          <div 
-            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-700 ease-out group ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}
-            style={{ transitionDelay: isVisible ? '150ms' : '0ms' }}
+          <div
+            className={`transition-[opacity,transform] duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"}`}
+            style={{ transitionDelay: isVisible ? "150ms" : "0ms" }}
           >
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
-              <Palette size={24} />
-            </div>
-            <h3 className="text-xl font-display font-semibold mb-4">Design Tools</h3>
-            <div className="flex flex-wrap gap-2">
-              {skills.tools.map((skill, idx) => (
-                <span 
-                  key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${300 + idx * 75}ms` : '0ms' }}
-                >
-                  {skill}
-                </span>
-              ))}
+            <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-shadow duration-150 group">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-150">
+                <Palette size={24} />
+              </div>
+              <h3 className="text-xl font-display font-semibold mb-4">Design Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.tools.map((skill, idx) => (
+                  <span
+                    key={skill}
+                    className={`transition-[opacity,transform] duration-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: isVisible ? `${300 + idx * 75}ms` : "0ms" }}
+                  >
+                    <span className="px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-150 cursor-default">
+                      {skill}
+                    </span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Core Skills */}
-          <div 
-            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-700 ease-out group ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}
-            style={{ transitionDelay: isVisible ? '300ms' : '0ms' }}
+          <div
+            className={`transition-[opacity,transform] duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"}`}
+            style={{ transitionDelay: isVisible ? "300ms" : "0ms" }}
           >
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
-              <Layers size={24} />
-            </div>
-            <h3 className="text-xl font-display font-semibold mb-4">Core Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {skills.core.map((skill, idx) => (
-                <span 
-                  key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${450 + idx * 75}ms` : '0ms' }}
-                >
-                  {skill}
-                </span>
-              ))}
+            <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-shadow duration-150 group">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-150">
+                <Layers size={24} />
+              </div>
+              <h3 className="text-xl font-display font-semibold mb-4">Core Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.core.map((skill, idx) => (
+                  <span
+                    key={skill}
+                    className={`transition-[opacity,transform] duration-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: isVisible ? `${450 + idx * 75}ms` : "0ms" }}
+                  >
+                    <span className="px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-150 cursor-default">
+                      {skill}
+                    </span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Soft Skills */}
-          <div 
-            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-700 ease-out group ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}
-            style={{ transitionDelay: isVisible ? '450ms' : '0ms' }}
+          <div
+            className={`transition-[opacity,transform] duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"}`}
+            style={{ transitionDelay: isVisible ? "450ms" : "0ms" }}
           >
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
-              <Users size={24} />
-            </div>
-            <h3 className="text-xl font-display font-semibold mb-4">Soft Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {skills.soft.map((skill, idx) => (
-                <span 
-                  key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${600 + idx * 75}ms` : '0ms' }}
-                >
-                  {skill}
-                </span>
-              ))}
+            <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-shadow duration-150 group">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-150">
+                <Users size={24} />
+              </div>
+              <h3 className="text-xl font-display font-semibold mb-4">Soft Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.soft.map((skill, idx) => (
+                  <span
+                    key={skill}
+                    className={`transition-[opacity,transform] duration-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: isVisible ? `${600 + idx * 75}ms` : "0ms" }}
+                  >
+                    <span className="px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-150 cursor-default">
+                      {skill}
+                    </span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
