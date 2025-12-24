@@ -1,4 +1,4 @@
-import { Dribbble, Youtube, ExternalLink } from "lucide-react";
+import { Dribbble, Youtube, ExternalLink, Mail } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FooterSection = () => {
@@ -24,7 +24,14 @@ const FooterSection = () => {
         </div>
 
         {/* Social links */}
-        <div className={`flex items-center justify-center gap-4 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '150ms' }}>
+        <div className={`flex flex-wrap items-center justify-center gap-4 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '150ms' }}>
+          <a 
+            href="mailto:faruq1287@gmail.com"
+            className="flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-full transition-all duration-300 btn-3d"
+          >
+            <Mail size={18} />
+            <span className="text-sm font-medium">Email Me</span>
+          </a>
           <a 
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
