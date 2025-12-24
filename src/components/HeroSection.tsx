@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Youtube, Facebook, Linkedin, Download, Box } from "lucide-react";
+import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Eye } from "lucide-react";
 import profileImage from "@/assets/profile-new.jpg";
 
 const HeroSection = () => {
@@ -27,15 +27,6 @@ const HeroSection = () => {
             {/* Social links */}
             <div className="flex items-center gap-3 mb-8 flex-wrap">
               <a 
-                href="https://www.linkedin.com/in/mkfaruq"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[3000ms] ease-in-out btn-3d"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a 
                 href="https://dribbble.com/mkfaruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -43,6 +34,15 @@ const HeroSection = () => {
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/mkfaruq"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[3000ms] ease-in-out btn-3d"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
               </a>
               <a 
                 href="https://www.facebook.com/faruq41" 
@@ -54,22 +54,13 @@ const HeroSection = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://sketchfab.com/Faruq" 
+                href="https://wa.me/8801750005162" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[3000ms] ease-in-out btn-3d"
-                aria-label="Sketchfab"
+                aria-label="WhatsApp"
               >
-                <Box size={20} />
-              </a>
-              <a 
-                href="https://youtu.be/S1WnwtPJdBg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[3000ms] ease-in-out btn-3d"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
+                <MessageCircle size={20} />
               </a>
             </div>
 
@@ -77,11 +68,12 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-4">
               <a 
                 href={`${import.meta.env.BASE_URL}Faruq_Hossain_Resume.pdf`}
-                download="Faruq_Hossain_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
-                <Download size={18} />
-                Download Resume
+                <Eye size={18} />
+                View Resume
               </a>
               <a 
                 href="#projects"

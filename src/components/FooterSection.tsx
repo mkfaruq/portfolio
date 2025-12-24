@@ -1,4 +1,4 @@
-import { Dribbble, Youtube, Mail, Linkedin, Facebook, Box } from "lucide-react";
+import { Dribbble, Mail, Linkedin, Facebook, MessageCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FooterSection = () => {
@@ -33,15 +33,6 @@ const FooterSection = () => {
             <span className="text-sm font-medium">Email Me</span>
           </a>
           <a 
-            href="https://www.linkedin.com/in/mkfaruq" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <Linkedin size={18} />
-            <span className="text-sm font-medium">LinkedIn</span>
-          </a>
-          <a 
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -49,6 +40,15 @@ const FooterSection = () => {
           >
             <Dribbble size={18} />
             <span className="text-sm font-medium">Dribbble</span>
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/mkfaruq" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
+          >
+            <Linkedin size={18} />
+            <span className="text-sm font-medium">LinkedIn</span>
           </a>
           <a 
             href="https://www.facebook.com/faruq41" 
@@ -60,22 +60,13 @@ const FooterSection = () => {
             <span className="text-sm font-medium">Facebook</span>
           </a>
           <a 
-            href="https://sketchfab.com/Faruq" 
+            href="https://wa.me/8801750005162" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
-            <Box size={18} />
-            <span className="text-sm font-medium">Sketchfab</span>
-          </a>
-          <a 
-            href="https://youtu.be/S1WnwtPJdBg" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <Youtube size={18} />
-            <span className="text-sm font-medium">YouTube</span>
+            <MessageCircle size={18} />
+            <span className="text-sm font-medium">WhatsApp</span>
           </a>
         </div>
 
