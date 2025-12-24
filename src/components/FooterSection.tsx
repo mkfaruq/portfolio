@@ -1,4 +1,4 @@
-import { Dribbble, Youtube, ExternalLink, Mail } from "lucide-react";
+import { Dribbble, Youtube, Mail, Linkedin, Facebook, Box } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FooterSection = () => {
@@ -33,6 +33,15 @@ const FooterSection = () => {
             <span className="text-sm font-medium">Email Me</span>
           </a>
           <a 
+            href="https://www.linkedin.com/in/mkfaruq" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+          >
+            <Linkedin size={18} />
+            <span className="text-sm font-medium">LinkedIn</span>
+          </a>
+          <a 
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -42,6 +51,24 @@ const FooterSection = () => {
             <span className="text-sm font-medium">Dribbble</span>
           </a>
           <a 
+            href="https://www.facebook.com/faruq41" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+          >
+            <Facebook size={18} />
+            <span className="text-sm font-medium">Facebook</span>
+          </a>
+          <a 
+            href="https://sketchfab.com/Faruq" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+          >
+            <Box size={18} />
+            <span className="text-sm font-medium">Sketchfab</span>
+          </a>
+          <a 
             href="https://youtu.be/S1WnwtPJdBg" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -49,15 +76,6 @@ const FooterSection = () => {
           >
             <Youtube size={18} />
             <span className="text-sm font-medium">YouTube</span>
-          </a>
-          <a 
-            href="https://flickr.com/photos/mfaruq" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
-          >
-            <ExternalLink size={18} />
-            <span className="text-sm font-medium">Flickr</span>
           </a>
         </div>
 
