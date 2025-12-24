@@ -60,7 +60,7 @@ const BackgroundElements = () => {
       className={className}
       style={{
         transform: `translate3d(${mouseX * mx * 0.35}px, ${mouseY * my * 0.35 + scrollY * sy}px, 0)`,
-        transition: "transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        transition: "transform 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         willChange: "transform",
       }}
     >
