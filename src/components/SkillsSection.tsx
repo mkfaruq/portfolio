@@ -14,7 +14,7 @@ const SkillsSection = () => {
     <section 
       id="skills" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-6 bg-secondary/30 scroll-mt-20"
+      className="py-24 px-6 bg-secondary/10 scroll-mt-20"
     >
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

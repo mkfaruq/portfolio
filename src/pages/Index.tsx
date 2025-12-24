@@ -21,14 +21,16 @@ const Index = () => {
       </Helmet>
       
       <BackgroundElements />
-      <Navbar />
-      <main className="bg-background min-h-screen page-reveal relative z-10">
-        <HeroSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <FooterSection />
-      </main>
+      <div className="relative z-[2]">
+        <Navbar />
+        <main className="page-reveal">
+          <HeroSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <FooterSection />
+        </main>
+      </div>
     </>
   );
 };
