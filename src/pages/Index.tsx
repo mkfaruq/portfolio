@@ -5,6 +5,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import FooterSection from "@/components/FooterSection";
+import BackgroundElements from "@/components/BackgroundElements";
 
 const Index = () => {
   return (
@@ -19,8 +20,9 @@ const Index = () => {
         <link rel="canonical" href="https://faruqhossain.com" />
       </Helmet>
       
+      <BackgroundElements />
       <Navbar />
-      <main className="bg-background min-h-screen page-reveal">
+      <main className="bg-background min-h-screen page-reveal relative z-10">
         <HeroSection />
         <SkillsSection />
         <ExperienceSection />
