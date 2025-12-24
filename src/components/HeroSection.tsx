@@ -76,9 +76,9 @@ const HeroSection = () => {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4">
               <a 
-                href="/Faruq_Hossain_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full btn-3d"
+                href={`${import.meta.env.BASE_URL}Faruq_Hossain_Resume.pdf`}
+                download="Faruq_Hossain_Resume.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full btn-3d glow-accent"
               >
                 <Download size={18} />
                 Download Resume
@@ -98,8 +98,8 @@ const HeroSection = () => {
           {/* Profile image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
-              <div className="absolute inset-0 bg-accent/20 rounded-3xl rotate-6 scale-105" />
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow">
+              <div className="absolute inset-0 bg-accent/20 rounded-3xl rotate-6 scale-105 glow-accent" />
+              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow glow-subtle">
                 <img 
                   src={profileImage} 
                   alt="Faruq Hossain - UI/UX Designer"

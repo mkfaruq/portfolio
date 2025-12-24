@@ -55,23 +55,23 @@
   }
 
   .dark {
-    --background: 270 25% 6%;
-    --foreground: 270 15% 95%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 270 25% 9%;
-    --card-foreground: 270 15% 95%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 270 25% 9%;
-    --popover-foreground: 270 15% 95%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 270 15% 95%;
-    --primary-foreground: 270 25% 6%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 270 20% 14%;
-    --secondary-foreground: 270 15% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 270 20% 16%;
-    --muted-foreground: 270 12% 60%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 270 70% 60%;
     --accent-foreground: 0 0% 100%;
@@ -79,20 +79,20 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 270 20% 16%;
-    --input: 270 20% 16%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
     --ring: 270 70% 60%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(270 25% 6%) 0%, hsl(270 30% 10%) 100%);
-    --shadow-glow: 0 0 60px -15px hsl(270 70% 60% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --shadow-glow: 0 0 80px -20px hsl(270 70% 60% / 0.4);
 
-    --sidebar-background: 270 25% 8%;
-    --sidebar-foreground: 270 15% 95%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 270 70% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 20% 14%;
-    --sidebar-accent-foreground: 270 15% 95%;
-    --sidebar-border: 270 20% 14%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
     --sidebar-ring: 270 70% 60%;
   }
 }
@@ -249,4 +249,68 @@
     inset 0 2px 6px 0 hsl(270 70% 70% / 0.2),
     inset 0 -2px 6px 0 hsl(270 70% 20% / 0.45),
     0 6px 16px -2px hsl(270 70% 60% / 0.5);
+}
+
+/* SVG Background animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(15px) rotate(-3deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* Subtle glow effects */
+.glow-accent {
+  box-shadow: 0 0 30px -5px hsl(270 70% 60% / 0.3);
+}
+
+.dark .glow-subtle {
+  box-shadow: 0 0 60px -10px hsl(270 70% 60% / 0.15);
 }
