@@ -1,21 +1,30 @@
-import { Mail, Dribbble, Youtube, ExternalLink } from "lucide-react";
+import { Dribbble, Youtube, ExternalLink } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FooterSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
-    <footer id="contact" className="py-20 px-6 scroll-mt-20">
+    <footer 
+      id="contact" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className="py-20 px-6 scroll-mt-20"
+    >
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
-          Get in Touch
-        </p>
-        <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-          Let's work together
-        </h2>
-        <p className="text-muted-foreground max-w-md mx-auto mb-10">
-          I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
-        </p>
+        <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
+            Get in Touch
+          </p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            Let's work together
+          </h2>
+          <p className="text-muted-foreground max-w-md mx-auto mb-10">
+            I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+          </p>
+        </div>
 
         {/* Social links */}
-        <div className="flex items-center justify-center gap-4 mb-16">
+        <div className={`flex items-center justify-center gap-4 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '150ms' }}>
           <a 
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
@@ -46,7 +55,7 @@ const FooterSection = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border">
+        <div className={`pt-8 border-t border-border transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '300ms' }}>
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Faruq Hossain. Designed with passion.
           </p>
