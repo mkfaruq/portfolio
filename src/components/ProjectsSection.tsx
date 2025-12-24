@@ -50,11 +50,11 @@ const ProjectsSection = () => {
       className="py-24 px-6 bg-secondary/10 scroll-mt-20"
     >
       <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
+          <p className={`text-accent font-medium tracking-wide uppercase text-sm mb-3 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '100ms' : '0ms' }}>
             Portfolio
           </p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold">
+          <h2 className={`text-4xl md:text-5xl font-display font-bold transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '200ms' : '0ms' }}>
             Selected Projects
           </h2>
         </div>
