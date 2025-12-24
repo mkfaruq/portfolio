@@ -2,7 +2,7 @@ import { Mail, Dribbble, Youtube, ExternalLink } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="py-20 px-6">
+    <footer id="contact" className="py-20 px-6 scroll-mt-20">
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
           Get in Touch

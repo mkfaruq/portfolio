@@ -19,7 +19,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section className="py-24 px-6">
+    <section id="experience" className="py-24 px-6 scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">

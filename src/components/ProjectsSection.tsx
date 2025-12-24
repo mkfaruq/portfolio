@@ -1,10 +1,15 @@
 import { ExternalLink, Figma } from "lucide-react";
+import projectBongoSource from "@/assets/project-bongo-source.jpg";
+import projectIotDashboard from "@/assets/project-iot-dashboard.jpg";
+import projectPostOffice from "@/assets/project-post-office.jpg";
+import projectIbanker from "@/assets/project-ibanker.jpg";
 
 const projects = [
   {
     title: "Bongo Source",
     description: "B2B Marketplace App designed using Material Design patterns and user-centered flows, optimizing buyer-seller interactions.",
     tags: ["Mobile App", "B2B", "Material Design"],
+    image: projectBongoSource,
     figmaLink: "#",
     liveLink: "#",
   },
@@ -12,6 +17,7 @@ const projects = [
     title: "IoT System Monitoring Dashboard",
     description: "Enhanced dashboard through clear data visualization, improved information architecture, and intuitive layouts.",
     tags: ["Dashboard", "IoT", "Data Visualization"],
+    image: projectIotDashboard,
     figmaLink: "#",
     liveLink: "https://dribbble.com/mkfaruq",
   },
@@ -19,6 +25,7 @@ const projects = [
     title: "Post Office Mail Booking System",
     description: "Redesigned using Interaction Design principles and Responsive Design, reducing user clicks and task time.",
     tags: ["Web App", "Government", "UX Research"],
+    image: projectPostOffice,
     figmaLink: "#",
     liveLink: "#",
   },
@@ -26,6 +33,7 @@ const projects = [
     title: "iBanker – AML Dashboard",
     description: "Anti-Money Laundering Cloud Dashboard with accessible, user-focused interfaces that improved task completion rates.",
     tags: ["Dashboard", "Fintech", "Cloud"],
+    image: projectIbanker,
     figmaLink: "#",
     liveLink: "#",
   },
@@ -33,7 +41,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-6 bg-secondary/30">
+    <section id="projects" className="py-24 px-6 bg-secondary/30 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
@@ -50,12 +58,14 @@ const ProjectsSection = () => {
               key={index}
               className="group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Project visual placeholder */}
-              <div className="h-48 bg-gradient-to-br from-accent/5 to-accent/20 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,hsl(var(--accent)/0.05)_25%,hsl(var(--accent)/0.05)_50%,transparent_50%,transparent_75%,hsl(var(--accent)/0.05)_75%)] bg-[length:20px_20px]" />
-                <span className="text-6xl font-display font-bold text-accent/20 group-hover:text-accent/40 transition-colors duration-500">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
+              {/* Project image */}
+              <div className="h-52 overflow-hidden relative">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               <div className="p-6">
