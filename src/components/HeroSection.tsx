@@ -16,7 +16,7 @@ const HeroSection = () => {
               UI/UX Designer
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-              Faruq
+              <span className="text-gradient">Faruq</span>
               <br />
               <span className="text-gradient">Hossain</span>
             </h1>
