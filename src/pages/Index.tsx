@@ -20,7 +20,7 @@ const Index = () => {
       </Helmet>
       
       <Navbar />
-      <main className="bg-background min-h-screen">
+      <main className="bg-background min-h-screen page-reveal">
         <HeroSection />
         <SkillsSection />
         <ExperienceSection />
