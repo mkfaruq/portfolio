@@ -78,7 +78,7 @@ const HeroSection = () => {
               <a 
                 href={`${import.meta.env.BASE_URL}Faruq_Hossain_Resume.pdf`}
                 download="Faruq_Hossain_Resume.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full btn-3d glow-accent"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
                 <Download size={18} />
                 Download Resume
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 href="#projects"
                 className="inline-flex items-center gap-3 text-foreground font-medium group"
               >
-                <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background group-hover:rotate-180 transition-all duration-300">
                   <ArrowDown size={18} className="animate-bounce" />
                 </span>
                 <span className="group-hover:text-accent transition-colors">View my work</span>

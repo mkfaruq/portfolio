@@ -27,7 +27,7 @@ const FooterSection = () => {
         <div className={`flex flex-wrap items-center justify-center gap-4 mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '150ms' }}>
           <a 
             href="mailto:faruq1287@gmail.com"
-            className="flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-full transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-accent/90 text-accent-foreground rounded-full transition-all duration-300 btn-3d btn-sweep"
           >
             <Mail size={18} />
             <span className="text-sm font-medium">Email Me</span>
@@ -36,7 +36,7 @@ const FooterSection = () => {
             href="https://www.linkedin.com/in/mkfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
             <Linkedin size={18} />
             <span className="text-sm font-medium">LinkedIn</span>
@@ -45,7 +45,7 @@ const FooterSection = () => {
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
             <Dribbble size={18} />
             <span className="text-sm font-medium">Dribbble</span>
@@ -54,7 +54,7 @@ const FooterSection = () => {
             href="https://www.facebook.com/faruq41" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
             <Facebook size={18} />
             <span className="text-sm font-medium">Facebook</span>
@@ -63,7 +63,7 @@ const FooterSection = () => {
             href="https://sketchfab.com/Faruq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
             <Box size={18} />
             <span className="text-sm font-medium">Sketchfab</span>
@@ -72,7 +72,7 @@ const FooterSection = () => {
             href="https://youtu.be/S1WnwtPJdBg" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
           >
             <Youtube size={18} />
             <span className="text-sm font-medium">YouTube</span>
