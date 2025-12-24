@@ -39,15 +39,15 @@ const ExperienceSection = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className={`absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`} style={{ transformOrigin: 'top' }} />
+          <div className={`absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'}`} style={{ transformOrigin: 'top' }} />
 
           {experiences.map((exp, index) => (
             <div 
               key={index}
               className={`relative pl-8 md:pl-0 pb-12 last:pb-0 ${
                 index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-1/2'
-              } transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${(index + 1) * 150}ms` }}
+              } transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}
+              style={{ transitionDelay: isVisible ? `${(index + 1) * 200}ms` : '0ms' }}
             >
               {/* Timeline dot */}
               <div className={`absolute left-0 md:left-1/2 w-4 h-4 rounded-full border-4 border-background md:-translate-x-1/2 ${

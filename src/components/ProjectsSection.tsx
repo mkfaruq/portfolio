@@ -63,8 +63,8 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className={`group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow transition-all duration-500 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${(index + 1) * 100}ms` }}
+              className={`group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow transition-all duration-700 ease-out hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-16 scale-95'}`}
+              style={{ transitionDelay: isVisible ? `${(index + 1) * 150}ms` : '0ms' }}
             >
               {/* Project image */}
               <div className="h-52 overflow-hidden relative">
