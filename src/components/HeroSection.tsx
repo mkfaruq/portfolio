@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Youtube, Figma, Download } from "lucide-react";
+import { ArrowDown, Dribbble, Youtube, Facebook, Linkedin, Download, Box } from "lucide-react";
 import profileImage from "@/assets/profile.png";
 
 const HeroSection = () => {
@@ -25,30 +25,51 @@ const HeroSection = () => {
             </p>
             
             {/* Social links */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-3 mb-8 flex-wrap">
+              <a 
+                href="https://linkedin.com/in/faruq" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
               <a 
                 href="https://dribbble.com/mkfaruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+                aria-label="Dribbble"
               >
                 <Dribbble size={20} />
               </a>
               <a 
-                href="https://youtu.be/S1WnwtPJdBg" 
+                href="https://www.facebook.com/faruq41" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+                aria-label="Facebook"
               >
-                <Youtube size={20} />
+                <Facebook size={20} />
               </a>
               <a 
                 href="https://sketchfab.com/Faruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+                aria-label="Sketchfab"
               >
-                <Figma size={20} />
+                <Box size={20} />
+              </a>
+              <a 
+                href="https://youtu.be/S1WnwtPJdBg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} />
               </a>
             </div>
 
