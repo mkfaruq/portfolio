@@ -189,28 +189,47 @@
   }
 }
 
-@keyframes revealDown {
+@keyframes pageLoad {
   0% {
-    clip-path: inset(0 0 100% 0);
     opacity: 0;
-    transform: translateY(-30px) scale(0.98);
-    filter: blur(8px);
+    transform: translateY(40px) scale(0.97);
+    filter: blur(12px);
   }
-  40% {
-    opacity: 0.6;
+  50% {
+    opacity: 0.5;
     filter: blur(4px);
   }
   100% {
-    clip-path: inset(0 0 0 0);
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
 }
 
-.page-reveal {
-  animation: revealDown 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.page-reveal {
+  animation: pageLoad 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.page-reveal > * {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.page-reveal > *:nth-child(1) { animation-delay: 0.1s; }
+.page-reveal > *:nth-child(2) { animation-delay: 0.2s; }
+.page-reveal > *:nth-child(3) { animation-delay: 0.3s; }
+.page-reveal > *:nth-child(4) { animation-delay: 0.4s; }
+.page-reveal > *:nth-child(5) { animation-delay: 0.5s; }
 
 /* 3D Button Effects */
 .btn-3d {
