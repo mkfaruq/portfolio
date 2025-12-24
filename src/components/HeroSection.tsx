@@ -30,7 +30,7 @@ const HeroSection = () => {
                 href="https://www.linkedin.com/in/mkfaruq"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-180 transition-all duration-500 btn-3d"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[750ms] ease-in-out btn-3d"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 href="https://dribbble.com/mkfaruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-180 transition-all duration-500 btn-3d"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[750ms] ease-in-out btn-3d"
                 aria-label="Dribbble"
               >
                 <Dribbble size={20} />
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 href="https://www.facebook.com/faruq41" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-180 transition-all duration-500 btn-3d"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[750ms] ease-in-out btn-3d"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 href="https://sketchfab.com/Faruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-180 transition-all duration-500 btn-3d"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[750ms] ease-in-out btn-3d"
                 aria-label="Sketchfab"
               >
                 <Box size={20} />
@@ -66,7 +66,7 @@ const HeroSection = () => {
                 href="https://youtu.be/S1WnwtPJdBg" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-180 transition-all duration-500 btn-3d"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:rotate-[360deg] transition-all duration-[750ms] ease-in-out btn-3d"
                 aria-label="YouTube"
               >
                 <Youtube size={20} />
