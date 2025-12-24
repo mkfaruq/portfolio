@@ -1,4 +1,5 @@
-import { Palette, Layers, Users, MessageSquare, Lightbulb, Smartphone } from "lucide-react";
+import { Palette, Layers, Users } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const skills = {
   tools: ["Figma", "Photoshop", "Illustrator", "Blender"],
@@ -7,10 +8,16 @@ const skills = {
 };
 
 const SkillsSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="skills" className="py-24 px-6 bg-secondary/30 scroll-mt-20">
+    <section 
+      id="skills" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className="py-24 px-6 bg-secondary/30 scroll-mt-20"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
             Expertise
           </p>
@@ -21,7 +28,10 @@ const SkillsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Design Tools */}
-          <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group">
+          <div 
+            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: '100ms' }}
+          >
             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
               <Palette size={24} />
             </div>
@@ -39,7 +49,10 @@ const SkillsSection = () => {
           </div>
 
           {/* Core Skills */}
-          <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group">
+          <div 
+            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: '200ms' }}
+          >
             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
               <Layers size={24} />
             </div>
@@ -57,7 +70,10 @@ const SkillsSection = () => {
           </div>
 
           {/* Soft Skills */}
-          <div className="bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group">
+          <div 
+            className={`bg-card p-8 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: '300ms' }}
+          >
             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
               <Users size={24} />
             </div>

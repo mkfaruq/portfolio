@@ -1,4 +1,5 @@
 import { ExternalLink, Figma } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import projectBongoSource from "@/assets/project-bongo-source.jpg";
 import projectIotDashboard from "@/assets/project-iot-dashboard.jpg";
 import projectPostOffice from "@/assets/project-post-office.jpg";
@@ -40,10 +41,16 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 });
+
   return (
-    <section id="projects" className="py-24 px-6 bg-secondary/30 scroll-mt-20">
+    <section 
+      id="projects" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className="py-24 px-6 bg-secondary/30 scroll-mt-20"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
             Portfolio
           </p>
@@ -56,7 +63,8 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
+              className={`group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow transition-all duration-500 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
               {/* Project image */}
               <div className="h-52 overflow-hidden relative">
