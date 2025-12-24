@@ -54,7 +54,7 @@ const ExperienceSection = () => {
                 exp.current ? 'bg-accent' : 'bg-muted-foreground'
               }`} />
 
-              <div className={`bg-card p-6 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-all duration-500 ${
+              <div className={`bg-card p-6 rounded-2xl shadow-soft border border-border hover:shadow-glow transition-shadow duration-150 ${
                 index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
               }`}>
                 <div className={`flex items-center gap-2 text-accent text-sm mb-2 ${
