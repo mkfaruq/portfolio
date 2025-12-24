@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // Redirect all 404s to index.html with the path stored in sessionStorage
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+      sessionStorage.setItem('redirect', path + search + hash);
+      window.location.replace('/portfolio/');
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
