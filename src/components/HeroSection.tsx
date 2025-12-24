@@ -30,7 +30,7 @@ const HeroSection = () => {
                 href="https://dribbble.com/mkfaruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
               >
                 <Dribbble size={20} />
               </a>
@@ -38,7 +38,7 @@ const HeroSection = () => {
                 href="https://youtu.be/S1WnwtPJdBg" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
               >
                 <Youtube size={20} />
               </a>
@@ -46,7 +46,7 @@ const HeroSection = () => {
                 href="https://sketchfab.com/Faruq" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
+                className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
               >
                 <Figma size={20} />
               </a>
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <a 
                 href="/Faruq_Hossain_Resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-glow"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-full btn-3d"
               >
                 <Download size={18} />
                 Download Resume

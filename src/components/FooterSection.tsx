@@ -20,7 +20,7 @@ const FooterSection = () => {
             href="https://dribbble.com/mkfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
           >
             <Dribbble size={18} />
             <span className="text-sm font-medium">Dribbble</span>
@@ -29,7 +29,7 @@ const FooterSection = () => {
             href="https://youtu.be/S1WnwtPJdBg" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
           >
             <Youtube size={18} />
             <span className="text-sm font-medium">YouTube</span>
@@ -38,7 +38,7 @@ const FooterSection = () => {
             href="https://flickr.com/photos/mfaruq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
           >
             <ExternalLink size={18} />
             <span className="text-sm font-medium">Flickr</span>
