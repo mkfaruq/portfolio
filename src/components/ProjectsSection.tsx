@@ -1,4 +1,5 @@
-import { ExternalLink, Figma } from "lucide-react";
+import { ExternalLink, Figma, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import projectBongoSource from "@/assets/project-bongo-source.jpg";
 import projectIotDashboard from "@/assets/project-iot-dashboard.jpg";
@@ -7,6 +8,7 @@ import projectIbanker from "@/assets/project-ibanker.jpg";
 
 const projects = [
   {
+    id: "bongo-source",
     title: "Bongo Source",
     description: "B2B Marketplace App designed using Material Design patterns and user-centered flows, optimizing buyer-seller interactions.",
     tags: ["Mobile App", "B2B", "Material Design"],
@@ -15,6 +17,7 @@ const projects = [
     liveLink: "#",
   },
   {
+    id: "iot-dashboard",
     title: "IoT System Monitoring Dashboard",
     description: "Enhanced dashboard through clear data visualization, improved information architecture, and intuitive layouts.",
     tags: ["Dashboard", "IoT", "Data Visualization"],
@@ -23,6 +26,7 @@ const projects = [
     liveLink: "https://dribbble.com/mkfaruq",
   },
   {
+    id: "post-office",
     title: "Post Office Mail Booking System",
     description: "Redesigned using Interaction Design principles and Responsive Design, reducing user clicks and task time.",
     tags: ["Web App", "Government", "UX Research"],
@@ -31,6 +35,7 @@ const projects = [
     liveLink: "#",
   },
   {
+    id: "ibanker",
     title: "iBanker – AML Dashboard",
     description: "Anti-Money Laundering Cloud Dashboard with accessible, user-focused interfaces that improved task completion rates.",
     tags: ["Dashboard", "Fintech", "Cloud"],
@@ -97,7 +102,7 @@ const ProjectsSection = () => {
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 flex-wrap">
                     <a
                       href={project.figmaLink}
                       className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-150"
@@ -112,6 +117,13 @@ const ProjectsSection = () => {
                       <ExternalLink size={16} />
                       View
                     </a>
+                    <Link
+                      to={`/case-study/${project.id}`}
+                      className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-accent-foreground transition-colors duration-150"
+                    >
+                      <FileText size={16} />
+                      View Case Study
+                    </Link>
                   </div>
                 </div>
               </div>
