@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -18,6 +19,7 @@ const Index = () => {
         <link rel="canonical" href="https://faruqhossain.com" />
       </Helmet>
       
+      <Navbar />
       <main className="bg-background min-h-screen">
         <HeroSection />
         <SkillsSection />

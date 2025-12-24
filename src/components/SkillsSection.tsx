@@ -8,7 +8,7 @@ const skills = {
 
 const SkillsSection = () => {
   return (
-    <section className="py-24 px-6 bg-secondary/30">
+    <section id="skills" className="py-24 px-6 bg-secondary/30 scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
