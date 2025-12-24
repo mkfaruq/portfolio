@@ -56,8 +56,8 @@ const Navbar = () => {
             FH<span className="text-accent">.</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -68,8 +68,10 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
+          </div>
 
-            {/* Theme Toggle */}
+          {/* Theme Toggle - Right side */}
+          <div className="hidden md:flex items-center">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 btn-3d"
