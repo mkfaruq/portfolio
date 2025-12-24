@@ -37,7 +37,7 @@ const SkillsSection = () => {
                 <Palette size={24} />
               </div>
               <h3 className="text-xl font-display font-semibold mb-4">Design Tools</h3>
-              <div className="flex flex-wrap gap-3 mt-auto">
+              <div className="flex flex-wrap gap-3 content-start flex-1">
                 {skills.tools.map((skill, idx) => (
                   <span
                     key={skill}
@@ -63,7 +63,7 @@ const SkillsSection = () => {
                 <Layers size={24} />
               </div>
               <h3 className="text-xl font-display font-semibold mb-4">Core Skills</h3>
-              <div className="flex flex-wrap gap-3 mt-auto">
+              <div className="flex flex-wrap gap-3 content-start flex-1">
                 {skills.core.map((skill, idx) => (
                   <span
                     key={skill}
@@ -89,7 +89,7 @@ const SkillsSection = () => {
                 <Users size={24} />
               </div>
               <h3 className="text-xl font-display font-semibold mb-4">Soft Skills</h3>
-              <div className="flex flex-wrap gap-3 mt-auto">
+              <div className="flex flex-wrap gap-3 content-start flex-1">
                 {skills.soft.map((skill, idx) => (
                   <span
                     key={skill}
