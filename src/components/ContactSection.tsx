@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useToast } from "@/hooks/use-toast";
 
 // Get your free access key at https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "4f67ed2a-2d6a-4684-aef9-591aa9885420";
 
 const projectTypes = [
   "UX Audit & Redesign",
