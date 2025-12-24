@@ -3,6 +3,9 @@ import { Send, Dribbble, Linkedin, Facebook, MessageCircle, Mail } from "lucide-
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useToast } from "@/hooks/use-toast";
 
+// Get your free access key at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 const projectTypes = [
   "UX Audit & Redesign",
   "SaaS Dashboard Design",
@@ -35,22 +38,50 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Project Inquiry: ${formData.projectType}`,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          project_type: formData.projectType,
+          budget: formData.budget,
+          message: formData.message,
+        }),
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you within 24 hours.",
-    });
+      const result = await response.json();
 
-    setFormData({
-      name: "",
-      email: "",
-      projectType: "",
-      budget: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you within 24 hours.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          projectType: "",
+          budget: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
