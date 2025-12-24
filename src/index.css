@@ -237,6 +237,19 @@
   transform: translateY(1px);
 }
 
+/* Button fill sweep (left -> right) */
+.btn-sweep {
+  background-image: linear-gradient(to right, hsl(var(--accent)), hsl(var(--accent)));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: background-size 0.35s cubic-bezier(0.2, 1, 0.2, 1), color 0.2s ease;
+}
+
+.btn-sweep:hover {
+  background-size: 100% 100%;
+}
+
 .dark .btn-3d {
   box-shadow: 
     inset 0 2px 4px 0 hsl(270 70% 70% / 0.15),
