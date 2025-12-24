@@ -16,7 +16,7 @@ const BackgroundElements = () => {
     <div className="fixed inset-0 pointer-events-none overflow-visible z-[1]">
       {/* Concentric circles - top left */}
       <svg
-        className="absolute top-[5%] left-[3%] w-32 h-32 opacity-[0.04] animate-float-slow"
+        className="absolute top-[5%] left-[3%] w-32 h-32 opacity-[0.025] animate-float-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
@@ -28,12 +28,12 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="8" fill="#EBD448" />
       </svg>
 
-      {/* Triangle - top right */}
+      {/* Triangle - top right - with rotation */}
       <svg
-        className="absolute top-[8%] right-[6%] w-36 h-36 opacity-[0.04] animate-float-reverse"
+        className="absolute top-[8%] right-[6%] w-36 h-36 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+        style={{ animationDuration: '45s' }}
       >
         <polygon points="50,5 95,90 5,90" stroke="#FFFFFF" strokeWidth="2" fill="none" />
         <polygon points="50,20 80,75 20,75" stroke="#EBD448" strokeWidth="2" fill="none" />
@@ -41,12 +41,12 @@ const BackgroundElements = () => {
         <circle cx="50" cy="55" r="6" fill="#2CC5BE" />
       </svg>
 
-      {/* Star - middle left */}
+      {/* Star - middle left - with rotation */}
       <svg
-        className="absolute top-[32%] left-[2%] w-28 h-28 opacity-[0.04] animate-float"
+        className="absolute top-[32%] left-[2%] w-28 h-28 opacity-[0.03] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+        style={{ animationDuration: '60s' }}
       >
         <polygon 
           points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40" 
@@ -59,12 +59,12 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="8" fill="#2CC5BE" />
       </svg>
 
-      {/* Square/Diamond - top center */}
+      {/* Square/Diamond - top center - with rotation */}
       <svg
-        className="absolute top-[3%] left-[38%] w-24 h-24 opacity-[0.04] animate-pulse-slow"
+        className="absolute top-[3%] left-[38%] w-24 h-24 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.22}px)` }}
+        style={{ animationDuration: '50s' }}
       >
         <rect x="15" y="15" width="70" height="70" stroke="#FFFFFF" strokeWidth="2" transform="rotate(45 50 50)" />
         <rect x="25" y="25" width="50" height="50" stroke="#EBD448" strokeWidth="2" transform="rotate(45 50 50)" />
@@ -74,7 +74,7 @@ const BackgroundElements = () => {
 
       {/* Concentric squares - middle right */}
       <svg
-        className="absolute top-[42%] right-[4%] w-40 h-40 opacity-[0.04] animate-pulse-slow"
+        className="absolute top-[42%] right-[4%] w-40 h-40 opacity-[0.02] animate-pulse-slow"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.08}px)` }}
@@ -86,12 +86,12 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="8" fill="#E94381" />
       </svg>
 
-      {/* Hexagon - bottom left */}
+      {/* Hexagon - bottom left - with rotation */}
       <svg
-        className="absolute bottom-[18%] left-[5%] w-32 h-32 opacity-[0.04] animate-float-reverse"
+        className="absolute bottom-[18%] left-[5%] w-32 h-32 opacity-[0.03] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * -0.12}px)` }}
+        style={{ animationDuration: '55s', animationDirection: 'reverse' }}
       >
         <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" stroke="#FFFFFF" strokeWidth="2" />
         <polygon points="50,15 78,32 78,68 50,85 22,68 22,32" stroke="#EBD448" strokeWidth="2" />
@@ -99,12 +99,12 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="10" fill="#2CC5BE" />
       </svg>
 
-      {/* Large star - bottom right */}
+      {/* Large star - bottom right - with rotation */}
       <svg
-        className="absolute bottom-[8%] right-[3%] w-44 h-44 opacity-[0.04] animate-float-slow"
+        className="absolute bottom-[8%] right-[3%] w-44 h-44 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * -0.18}px)` }}
+        style={{ animationDuration: '70s' }}
       >
         <polygon 
           points="50,2 61,38 98,38 68,60 79,98 50,75 21,98 32,60 2,38 39,38" 
@@ -123,7 +123,7 @@ const BackgroundElements = () => {
 
       {/* Cross/Plus - scattered */}
       <svg
-        className="absolute top-[22%] right-[28%] w-16 h-16 opacity-[0.04] animate-float"
+        className="absolute top-[22%] right-[28%] w-16 h-16 opacity-[0.02] animate-float"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.12}px)` }}
@@ -133,24 +133,24 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="10" fill="#E94381" />
       </svg>
 
-      {/* Triangle - middle */}
+      {/* Triangle - middle - with rotation */}
       <svg
-        className="absolute top-[58%] left-[22%] w-20 h-20 opacity-[0.04] animate-pulse-slow"
+        className="absolute top-[58%] left-[22%] w-20 h-20 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.16}px)` }}
+        style={{ animationDuration: '40s', animationDirection: 'reverse' }}
       >
         <polygon points="50,10 90,85 10,85" stroke="#2CC5BE" strokeWidth="2" fill="none" />
         <polygon points="50,30 70,70 30,70" stroke="#FFFFFF" strokeWidth="2" fill="none" />
         <circle cx="50" cy="58" r="8" fill="#EBD448" />
       </svg>
 
-      {/* Pentagon - right side */}
+      {/* Pentagon - right side - with rotation */}
       <svg
-        className="absolute top-[72%] right-[20%] w-18 h-18 opacity-[0.04] animate-float-reverse"
+        className="absolute top-[72%] right-[20%] w-18 h-18 opacity-[0.03] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * -0.15}px)` }}
+        style={{ animationDuration: '65s' }}
       >
         <polygon points="50,5 95,38 77,92 23,92 5,38" stroke="#E94381" strokeWidth="2" fill="none" />
         <polygon points="50,20 80,42 68,80 32,80 20,42" stroke="#EBD448" strokeWidth="2" fill="none" />
@@ -159,7 +159,7 @@ const BackgroundElements = () => {
 
       {/* Concentric circles - center bottom */}
       <svg
-        className="absolute bottom-[5%] left-[42%] w-32 h-32 opacity-[0.04] animate-float"
+        className="absolute bottom-[5%] left-[42%] w-32 h-32 opacity-[0.02] animate-float"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * -0.08}px)` }}
@@ -171,24 +171,24 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="6" fill="#EBD448" />
       </svg>
 
-      {/* Diamond - upper left */}
+      {/* Diamond - upper left - with rotation */}
       <svg
-        className="absolute top-[28%] left-[18%] w-16 h-16 opacity-[0.04] animate-float-slow"
+        className="absolute top-[28%] left-[18%] w-16 h-16 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.14}px)` }}
+        style={{ animationDuration: '35s', animationDirection: 'reverse' }}
       >
         <rect x="20" y="20" width="60" height="60" stroke="#2CC5BE" strokeWidth="2" transform="rotate(45 50 50)" />
         <rect x="30" y="30" width="40" height="40" stroke="#FFFFFF" strokeWidth="2" transform="rotate(45 50 50)" />
         <circle cx="50" cy="50" r="8" fill="#E94381" />
       </svg>
 
-      {/* Star - center */}
+      {/* Star - center - with rotation */}
       <svg
-        className="absolute top-[52%] left-[48%] w-14 h-14 opacity-[0.04] animate-pulse-slow"
+        className="absolute top-[52%] left-[48%] w-14 h-14 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+        style={{ animationDuration: '50s' }}
       >
         <polygon 
           points="50,10 58,40 90,40 65,58 75,90 50,70 25,90 35,58 10,40 42,40" 
@@ -199,7 +199,7 @@ const BackgroundElements = () => {
 
       {/* Hexagon - upper right */}
       <svg
-        className="absolute top-[15%] left-[58%] w-18 h-18 opacity-[0.04] animate-float-reverse"
+        className="absolute top-[15%] left-[58%] w-18 h-18 opacity-[0.03] animate-float-reverse"
         viewBox="0 0 100 100"
         fill="none"
         style={{ transform: `translateY(${scrollY * 0.18}px)` }}
@@ -209,33 +209,33 @@ const BackgroundElements = () => {
         <circle cx="50" cy="50" r="10" fill="#E94381" />
       </svg>
 
-      {/* Small triangles scattered */}
+      {/* Small triangles scattered - with rotation */}
       <svg
-        className="absolute top-[68%] left-[8%] w-12 h-12 opacity-[0.04] animate-float"
+        className="absolute top-[68%] left-[8%] w-12 h-12 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+        style={{ animationDuration: '30s' }}
       >
         <polygon points="50,15 85,80 15,80" stroke="#FFFFFF" strokeWidth="2" fill="none" />
         <circle cx="50" cy="60" r="12" fill="#EBD448" />
       </svg>
 
       <svg
-        className="absolute top-[12%] right-[35%] w-10 h-10 opacity-[0.04] animate-pulse-slow"
+        className="absolute top-[12%] right-[35%] w-10 h-10 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.08}px)` }}
+        style={{ animationDuration: '25s', animationDirection: 'reverse' }}
       >
         <polygon points="50,20 80,75 20,75" stroke="#E94381" strokeWidth="2" fill="none" />
         <circle cx="50" cy="58" r="10" fill="#2CC5BE" />
       </svg>
 
-      {/* Small squares */}
+      {/* Small squares - with rotation */}
       <svg
-        className="absolute bottom-[32%] right-[12%] w-14 h-14 opacity-[0.04] animate-float-slow"
+        className="absolute bottom-[32%] right-[12%] w-14 h-14 opacity-[0.025] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * -0.1}px)` }}
+        style={{ animationDuration: '40s', animationDirection: 'reverse' }}
       >
         <rect x="15" y="15" width="70" height="70" stroke="#EBD448" strokeWidth="2" />
         <rect x="30" y="30" width="40" height="40" stroke="#FFFFFF" strokeWidth="2" />
@@ -243,10 +243,10 @@ const BackgroundElements = () => {
       </svg>
 
       <svg
-        className="absolute top-[38%] left-[32%] w-12 h-12 opacity-[0.04] animate-float-reverse"
+        className="absolute top-[38%] left-[32%] w-12 h-12 opacity-[0.02] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="none"
-        style={{ transform: `translateY(${scrollY * 0.12}px)` }}
+        style={{ animationDuration: '35s' }}
       >
         <rect x="20" y="20" width="60" height="60" stroke="#2CC5BE" strokeWidth="2" />
         <circle cx="50" cy="50" r="12" fill="#EBD448" />
@@ -254,19 +254,19 @@ const BackgroundElements = () => {
 
       {/* Glowing orbs */}
       <div 
-        className="absolute top-[18%] right-[42%] w-6 h-6 rounded-full opacity-[0.04] blur-md animate-pulse-slow"
+        className="absolute top-[18%] right-[42%] w-6 h-6 rounded-full opacity-[0.025] blur-md animate-pulse-slow"
         style={{ backgroundColor: '#EBD448', transform: `translateY(${scrollY * 0.1}px)` }}
       />
       <div 
-        className="absolute bottom-[28%] left-[38%] w-5 h-5 rounded-full opacity-[0.04] blur-md animate-float"
+        className="absolute bottom-[28%] left-[38%] w-5 h-5 rounded-full opacity-[0.02] blur-md animate-float"
         style={{ backgroundColor: '#2CC5BE', animationDelay: '2s', transform: `translateY(${scrollY * -0.12}px)` }}
       />
       <div 
-        className="absolute top-[48%] left-[55%] w-4 h-4 rounded-full opacity-[0.04] blur-md animate-float-reverse"
+        className="absolute top-[48%] left-[55%] w-4 h-4 rounded-full opacity-[0.03] blur-md animate-float-reverse"
         style={{ backgroundColor: '#E94381', transform: `translateY(${scrollY * 0.08}px)` }}
       />
       <div 
-        className="absolute top-[75%] right-[38%] w-5 h-5 rounded-full opacity-[0.04] blur-md animate-pulse-slow"
+        className="absolute top-[75%] right-[38%] w-5 h-5 rounded-full opacity-[0.025] blur-md animate-pulse-slow"
         style={{ backgroundColor: '#FFFFFF', animationDelay: '1s', transform: `translateY(${scrollY * -0.1}px)` }}
       />
     </div>
