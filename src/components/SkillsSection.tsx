@@ -40,8 +40,8 @@ const SkillsSection = () => {
               {skills.tools.map((skill, idx) => (
                 <span 
                   key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-all duration-500 ease-out cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transitionDelay: isVisible ? `${300 + idx * 75}ms` : '0ms' }}
+                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${300 + idx * 75}ms` : '0ms' }}
                 >
                   {skill}
                 </span>
@@ -62,8 +62,8 @@ const SkillsSection = () => {
               {skills.core.map((skill, idx) => (
                 <span 
                   key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-all duration-500 ease-out cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transitionDelay: isVisible ? `${450 + idx * 75}ms` : '0ms' }}
+                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${450 + idx * 75}ms` : '0ms' }}
                 >
                   {skill}
                 </span>
@@ -84,8 +84,8 @@ const SkillsSection = () => {
               {skills.soft.map((skill, idx) => (
                 <span 
                   key={skill}
-                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-all duration-500 ease-out cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                  style={{ transitionDelay: isVisible ? `${600 + idx * 75}ms` : '0ms' }}
+                  className={`px-3 py-1.5 bg-secondary text-sm rounded-full text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  style={{ transition: `opacity 500ms ease-out, transform 500ms ease-out, background-color 200ms, color 200ms`, transitionDelay: isVisible ? `${600 + idx * 75}ms` : '0ms' }}
                 >
                   {skill}
                 </span>
