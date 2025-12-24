@@ -10,10 +10,10 @@ const experiences = [
     current: true,
   },
   {
-    title: "Designer",
+    title: "Visual & Product Designer",
     company: "Prime IT",
     period: "Dec 2017 - Mar 2019",
-    description: "Worked as a product designer for a USA-based company, creating 3D mockups and visual assets for promotional items. Delivered product designs and supervised mold design for factory production.",
+    description: "Designed production-ready visual systems and product mockups for a USA-based manufacturing company. Created 3D product visuals, promotional assets and supervised mold-ready design handoff.",
     current: false,
   },
 ];
