@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Eye, Mail } from "lucide-react";
+import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Calendar, Mail } from "lucide-react";
 import profileImage from "@/assets/profile-new.jpg";
 
 const HeroSection = () => {
@@ -15,13 +15,11 @@ const HeroSection = () => {
             <p className="text-accent font-medium tracking-wide uppercase text-sm mb-4">
               UI/UX Designer
             </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-              <span className="text-gradient">Faruq</span>
-              <br />
-              <span className="text-gradient">Hossain</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+              I design <span className="text-gradient">conversion-focused</span> websites & apps that help startups grow users and revenue.
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-              Creative UI/UX designer with 2+ years of experience crafting user-centered digital interfaces. Passionate about turning complex requirements into elegant and functional designs.
+              I help SaaS startups and small businesses transform complex ideas into clean, intuitive digital products that users love.
             </p>
             
             {/* Social links */}
@@ -74,13 +72,11 @@ const HeroSection = () => {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4">
               <a 
-                href={`${import.meta.env.BASE_URL}Faruq_Hossain_Resume.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
-                <Eye size={22} strokeWidth={2.5} />
-                View Resume
+                <Calendar size={20} strokeWidth={2} />
+                Book a Free Consultation
               </a>
               <a 
                 href="#projects"
@@ -89,7 +85,7 @@ const HeroSection = () => {
                 <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
                   <ArrowDown size={18} className="animate-bounce" />
                 </span>
-                <span className="group-hover:text-accent transition-colors">View my work</span>
+                <span className="group-hover:text-accent transition-colors">View Case Studies</span>
               </a>
             </div>
           </div>
