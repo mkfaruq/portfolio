@@ -1,26 +1,26 @@
-import { Search, LayoutDashboard, Smartphone, MousePointer } from "lucide-react";
+import { LayoutDashboard, Landmark, Building2, Smartphone } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
-    icon: Search,
-    title: "UX Audit & Redesign",
-    description: "Identify usability issues & improve engagement through comprehensive analysis and strategic redesign.",
+    icon: LayoutDashboard,
+    title: "SaaS & Admin Dashboard UX",
+    description: "Design complex dashboards with clear data visualization and workflow clarity.",
   },
   {
-    icon: LayoutDashboard,
-    title: "SaaS Dashboard Design",
-    description: "Scalable admin experiences for growing teams with intuitive data visualization and workflows.",
+    icon: Landmark,
+    title: "Fintech & AML Product Design",
+    description: "Secure, compliant and user-friendly financial product interfaces.",
+  },
+  {
+    icon: Building2,
+    title: "Government & Public Service Systems",
+    description: "UX design for high-volume citizen service platforms.",
   },
   {
     icon: Smartphone,
-    title: "Mobile App UI/UX",
-    description: "Clean interfaces users understand instantly with seamless mobile-first design patterns.",
-  },
-  {
-    icon: MousePointer,
-    title: "Landing Page UX",
-    description: "High-converting landing page experiences that turn visitors into customers.",
+    title: "Mobile B2B Marketplace UX",
+    description: "Optimized buyer-seller workflows and task-focused mobile UI.",
   },
 ];
 

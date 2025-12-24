@@ -13,13 +13,13 @@ const HeroSection = () => {
           {/* Text content */}
           <div className="order-2 lg:order-1 animate-fade-up">
             <p className="text-accent font-medium tracking-wide uppercase text-sm mb-4">
-              UI/UX Designer
+              Product UI/UX Designer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-              I design <span className="text-gradient">conversion-focused</span> websites & apps that help startups grow users and revenue.
+              I design <span className="text-gradient">scalable SaaS dashboards</span> & data-driven products that users understand instantly.
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-              I help SaaS startups and small businesses transform complex ideas into clean, intuitive digital products that users love.
+              Product UI/UX designer with 2+ years of experience building fintech, IoT monitoring and government service platforms.
             </p>
             
             {/* Social links */}
@@ -76,7 +76,7 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
                 <Calendar size={20} strokeWidth={2} />
-                Book a Free Consultation
+                Book a Product Design Call
               </a>
               <a 
                 href="#projects"

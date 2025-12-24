@@ -3,9 +3,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
-    quote: "Faruq delivered our dashboard design beyond expectations. The UX improvements saved our development time significantly.",
+    quote: "Faruq redesigned our AML dashboard, improving task flow clarity and reducing manual review errors significantly.",
     author: "Product Manager",
-    company: "Prime IT",
+    company: "iBanker AML Platform",
   },
   {
     quote: "Working with Faruq was a game-changer for our startup. His designs helped us increase user engagement by 40%.",

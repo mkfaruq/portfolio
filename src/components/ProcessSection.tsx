@@ -2,12 +2,12 @@ import { Search, FileText, PenTool, Palette, TestTube, Rocket } from "lucide-rea
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
-  { icon: Search, label: "Discover", description: "Understanding goals" },
-  { icon: FileText, label: "Research", description: "User & market analysis" },
-  { icon: PenTool, label: "Wireframe", description: "Structure & flow" },
-  { icon: Palette, label: "Design", description: "Visual interface" },
-  { icon: TestTube, label: "Test", description: "User validation" },
-  { icon: Rocket, label: "Deliver", description: "Handoff & support" },
+  { icon: Search, label: "Discover", description: "Stakeholder interviews" },
+  { icon: FileText, label: "Research", description: "Usability testing & task analysis" },
+  { icon: PenTool, label: "Wireframe", description: "IA & workflow mapping" },
+  { icon: Palette, label: "Design", description: "Dashboard UI & component systems" },
+  { icon: TestTube, label: "Test", description: "Iterative usability testing" },
+  { icon: Rocket, label: "Deliver", description: "Dev handoff & QA support" },
 ];
 
 const ProcessSection = () => {

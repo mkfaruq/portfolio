@@ -11,7 +11,8 @@ const projects = [
     id: "bongo-source",
     title: "Bongo Source",
     description: "B2B Marketplace App designed using Material Design patterns and user-centered flows, optimizing buyer-seller interactions.",
-    tags: ["Mobile App", "B2B", "Material Design"],
+    tags: ["B2B Marketplace", "Mobile App", "Material Design"],
+    domain: "B2B Marketplace",
     image: projectBongoSource,
     figmaLink: "#",
     liveLink: "#",
@@ -20,7 +21,8 @@ const projects = [
     id: "iot-dashboard",
     title: "IoT System Monitoring Dashboard",
     description: "Enhanced dashboard through clear data visualization, improved information architecture, and intuitive layouts.",
-    tags: ["Dashboard", "IoT", "Data Visualization"],
+    tags: ["IoT Dashboard", "Data Visualization", "Dashboard"],
+    domain: "IoT Dashboard",
     image: projectIotDashboard,
     figmaLink: "#",
     liveLink: "https://dribbble.com/mkfaruq",
@@ -29,7 +31,8 @@ const projects = [
     id: "post-office",
     title: "Post Office Mail Booking System",
     description: "Redesigned using Interaction Design principles and Responsive Design, reducing user clicks and task time.",
-    tags: ["Web App", "Government", "UX Research"],
+    tags: ["Government System", "Web App", "UX Research"],
+    domain: "Government System",
     image: projectPostOffice,
     figmaLink: "#",
     liveLink: "#",
@@ -38,7 +41,8 @@ const projects = [
     id: "ibanker",
     title: "iBanker – AML Dashboard",
     description: "Anti-Money Laundering Cloud Dashboard with accessible, user-focused interfaces that improved task completion rates.",
-    tags: ["Dashboard", "Fintech", "Cloud"],
+    tags: ["Fintech / AML Platform", "Dashboard", "Cloud"],
+    domain: "Fintech / AML Platform",
     image: projectIbanker,
     figmaLink: "#",
     liveLink: "#",
@@ -85,7 +89,10 @@ const ProjectsSection = () => {
 
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    <span className="px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
+                      {project.domain}
+                    </span>
+                    {project.tags.slice(1).map((tag) => (
                       <span
                         key={tag}
                         className="px-2.5 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full"

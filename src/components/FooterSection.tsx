@@ -12,7 +12,7 @@ const FooterSection = () => {
         {/* SEO Text */}
         <div className={`text-center mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl mx-auto">
-            Faruq Hossain is a freelance UI/UX designer in Bangladesh specializing in SaaS dashboards, fintech applications, and mobile app user experience design.
+            Product UI/UX Designer specializing in SaaS dashboards, fintech systems, IoT monitoring platforms and government service UX in Bangladesh.
           </p>
         </div>
 
