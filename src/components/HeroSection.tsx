@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Calendar, Mail } from "lucide-react";
+import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, FileDown, Mail } from "lucide-react";
 import profileImage from "@/assets/profile-new.jpg";
 
 const HeroSection = () => {
@@ -16,10 +16,10 @@ const HeroSection = () => {
               Product UI/UX Designer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-              I design <span className="text-gradient">scalable SaaS dashboards</span> & data-driven products that users understand instantly.
+              Product UI/UX Designer specialized in <span className="text-gradient">SaaS Dashboards</span>, Web & Mobile Applications and complex platforms
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-              Product UI/UX designer with 2+ years of experience building fintech, IoT monitoring and government service platforms.
+              2+ years of experience designing data-driven web and mobile products - including government service platforms, IoT & anti money laundering monitoring systems, B2B business platform.
             </p>
             
             {/* Social links */}
@@ -72,11 +72,13 @@ const HeroSection = () => {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4">
               <a 
-                href="#contact"
+                href="/Faruq_Hossain_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
-                <Calendar size={20} strokeWidth={2} />
-                Book a Product Design Call
+                <FileDown size={20} strokeWidth={2} />
+                Download Resume
               </a>
               <a 
                 href="#projects"
