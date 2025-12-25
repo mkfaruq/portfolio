@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
       
-      <div className="max-w-6xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-16 items-center">
           {/* Text content */}
           <div className="order-2 lg:order-1 animate-fade-up">
             <p className="text-accent font-medium tracking-wide uppercase text-sm mb-4">
@@ -96,17 +96,12 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 rounded-3xl rotate-6 scale-105 glow-accent" />
-              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-glow glow-subtle">
+              <div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-3xl overflow-hidden shadow-glow glow-subtle">
                 <img 
                   src={profileImage} 
                   alt="Faruq Hossain - UI/UX Designer"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card px-5 py-3 rounded-2xl shadow-soft border border-border">
-                <p className="text-sm font-medium">2+ Years</p>
-                <p className="text-xs text-muted-foreground">Experience</p>
               </div>
             </div>
           </div>
