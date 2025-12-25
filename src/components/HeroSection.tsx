@@ -13,7 +13,9 @@ const HeroSection = () => {
           {/* Text content */}
           <div className="order-2 lg:order-1 animate-fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4">
-              <span className="text-gradient animate-gradient-shift">Product UI/UX Designer</span>
+              <span className="text-gradient animate-gradient-shift inline-block overflow-hidden whitespace-nowrap animate-typewriter border-r-2 border-accent">
+                Product UI/UX Designer
+              </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-medium mb-6">
               specialized in SaaS Dashboards, Web & Mobile Applications and Complex Platforms

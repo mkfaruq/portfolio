@@ -122,6 +122,11 @@
     animation: gradientShift 3s ease-in-out infinite;
   }
 
+  .animate-typewriter {
+    animation: typewriter 2.5s steps(22) 0.5s forwards, blink 0.7s step-end infinite 3s;
+    width: 0;
+  }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -158,6 +163,24 @@
   }
   50% {
     background-position: 100% center;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: hsl(var(--accent));
+  }
+  50% {
+    border-color: transparent;
   }
 }
 
