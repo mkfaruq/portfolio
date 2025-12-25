@@ -123,7 +123,7 @@
   }
 
   .animate-typewriter {
-    animation: typewriter 2.5s steps(22) 0.5s forwards, blink 0.7s step-end infinite 3s;
+    animation: typewriter 2.5s steps(22) 0.5s forwards, blink 0.7s step-end 4 0.5s, cursorFade 0.1s ease-out 3.5s forwards;
     width: 0;
   }
 
@@ -180,6 +180,12 @@
     border-color: hsl(var(--accent));
   }
   50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes cursorFade {
+  to {
     border-color: transparent;
   }
 }
