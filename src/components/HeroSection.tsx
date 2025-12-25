@@ -16,7 +16,7 @@ const HeroSection = () => {
               Product UI/UX Designer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-              Product UI/UX Designer specialized in <span className="text-gradient">SaaS Dashboards</span>, Web & Mobile Applications and complex platforms
+              Product UI/UX Designer specialized in <span className="text-gradient">SaaS Dashboards, Web & Mobile Applications and Complex Platforms</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
               2+ years of experience designing data-driven web and mobile products - including government service platforms, IoT & anti money laundering monitoring systems, B2B business platform.
