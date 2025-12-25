@@ -1,11 +1,11 @@
-import { Briefcase, Layout, Clock, Star } from "lucide-react";
+import { Smartphone, Layout, Building2, Clock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const stats = [
   { icon: Layout, value: "4+", label: "Enterprise Dashboards Designed" },
-  { icon: Briefcase, value: "13+", label: "Mobile Platform Products Delivered" },
-  { icon: Clock, value: "2", label: "Government Systems Redesigned" },
-  { icon: Star, value: "2+", label: "Years Product Design Experience" },
+  { icon: Smartphone, value: "13+", label: "Mobile Platform Products Delivered" },
+  { icon: Building2, value: "2", label: "Government Systems Redesigned" },
+  { icon: Clock, value: "2+", label: "Years Product Design Experience" },
 ];
 
 const ImpactSection = () => {
