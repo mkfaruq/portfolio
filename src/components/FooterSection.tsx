@@ -12,7 +12,7 @@ const FooterSection = () => {
         {/* SEO Text */}
         <div className={`text-center mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl mx-auto">
-            Product UI/UX Designer specializing in SaaS dashboards, fintech systems, IoT monitoring platforms and government service UX in Bangladesh.
+            Product UI/UX Designer experienced in SaaS Dashboards, Mobile App UI/UX, Web Applications & complex platforms.
           </p>
         </div>
 

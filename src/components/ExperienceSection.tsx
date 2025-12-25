@@ -6,14 +6,14 @@ const experiences = [
     title: "UI/UX Engineer",
     company: "SmartThink",
     period: "Jul 2024 - Present",
-    description: "Designing intuitive digital product experiences, translating user needs into clean and functional interfaces. Created wireframes, high-fidelity mockups and interactive prototypes in Figma.",
+    description: "Design scalable SaaS dashboards, web applications, and mobile apps. Created wireframes, high-fidelity mockups and interactive prototypes in Figma.",
     current: true,
   },
   {
     title: "Visual & Product Designer",
     company: "Prime IT",
     period: "Dec 2017 - Mar 2019",
-    description: "Designed production-ready visual systems and product mockups for a USA-based manufacturing company. Created 3D product visuals, promotional assets and supervised mold-ready design handoff.",
+    description: "Designed production-ready product visuals and 3D mockups for manufacturing workflows. Supervised mold-ready design handoff and asset production.",
     current: false,
   },
 ];

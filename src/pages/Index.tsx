@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -16,12 +17,12 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Faruq Hossain | UI/UX Designer - SaaS & Fintech Specialist</title>
+        <title>Faruq Hossain | Product UI/UX Designer - SaaS Dashboards & Web Applications</title>
         <meta 
           name="description" 
-          content="I design conversion-focused websites & apps that help startups grow users and revenue. Specializing in SaaS dashboards, fintech, and mobile app UX design." 
+          content="Product UI/UX Designer experienced in SaaS Dashboards, Mobile App UI/UX, Web Applications & complex platforms. 2+ years designing data-driven products." 
         />
-        <meta name="keywords" content="UI/UX Designer, SaaS Dashboard Design, Fintech UX, Mobile App Design, Product Designer, Bangladesh" />
+        <meta name="keywords" content="Product UI/UX Designer, SaaS Dashboard Design, Mobile App UI/UX, Web Application Design, IoT Dashboard, Government Systems, Bangladesh" />
         <link rel="canonical" href="https://faruqhossain.com" />
       </Helmet>
       
@@ -30,6 +31,7 @@ const Index = () => {
         <Navbar />
         <main className="page-reveal">
           <HeroSection />
+          <AboutSection />
           <ServicesSection />
           <SkillsSection />
           <ProcessSection />
