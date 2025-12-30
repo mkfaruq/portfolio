@@ -19,9 +19,9 @@ const AboutSection = () => {
           </h2>
         </div>
 
-        <div className={`bg-card rounded-2xl p-8 md:p-12 border border-border shadow-soft transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: isVisible ? '450ms' : '0ms' }}>
+        <div className={`glass-card rounded-2xl p-8 md:p-12 transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: isVisible ? '450ms' : '0ms' }}>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            I am a product-focused UI/UX designer with hands-on experience building complex systems for SaaS Dashboards, web applications, mobile apps & complex platforms. I collaborate closely with developers and stakeholders to translate business requirements into intuitive user experiences and scalable design systems.
+            I’m not just a designer; I’m a system thinker. I enjoy the messy, complex problems that most designers avoid. My goal is simple: make heavy data feel light, and complex workflows feel effortless.
           </p>
         </div>
       </div>

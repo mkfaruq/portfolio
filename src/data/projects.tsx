@@ -1,0 +1,133 @@
+import projectBongoSource from "@/assets/project-bongo-source.jpg";
+import projectIotDashboard from "@/assets/project-iot-dashboard.jpg";
+import projectPostOffice from "@/assets/project-post-office.jpg";
+import projectIbanker from "@/assets/project-ibanker.jpg";
+
+import { Project } from "@/types";
+
+export const projects: Project[] = [
+    {
+        id: "bongo-source",
+        title: "Bongo Source",
+        subtitle: "B2B Marketplace Mobile App",
+        description: "B2B Marketplace App designed using Material Design patterns and user-centered flows, optimizing buyer-seller interactions.",
+        tags: ["B2B Marketplace App", "Mobile App", "Material Design"],
+        domain: "B2B Marketplace App",
+        image: projectBongoSource,
+        figmaLink: "#",
+        liveLink: "#",
+        problem: "Buyers and sellers in the B2B space struggled with fragmented communication and complex workflows, leading to missed opportunities and inefficient transactions. The existing platform lacked intuitive navigation and mobile-first design patterns.",
+        role: [
+            "Led end-to-end UX design from research to final handoff",
+            "Conducted user interviews and competitive analysis",
+            "Created wireframes, prototypes, and high-fidelity UI",
+            "Collaborated with developers for seamless implementation",
+        ],
+        process: [
+            { step: "Discovery", description: "Interviewed 15+ B2B users to understand pain points in current marketplace experiences" },
+            { step: "Research", description: "Analyzed 5 competitor apps and identified UX gaps in transaction flows" },
+            { step: "Wireframing", description: "Created low-fidelity wireframes focusing on simplified buyer-seller interactions" },
+            { step: "Design", description: "Developed Material Design-based UI with consistent component library" },
+            { step: "Testing", description: "Conducted usability tests with 8 users, iterated based on feedback" },
+            { step: "Delivery", description: "Handed off annotated designs with developer documentation" },
+        ],
+        outcomes: [
+            { metric: "User Task Completion", result: "+35% improvement" },
+            { metric: "Time to First Order", result: "Reduced by 40%" },
+            { metric: "User Satisfaction Score", result: "4.6/5 rating" },
+        ],
+    },
+    {
+        id: "iot-dashboard",
+        title: "IoT System Monitoring Dashboard",
+        subtitle: "Real-time Device Monitoring Platform",
+        description: "Enhanced dashboard through clear data visualization, improved information architecture, and intuitive layouts.",
+        tags: ["IoT Monitoring Platform", "Data Visualization", "Dashboard"],
+        domain: "IoT Monitoring Platform",
+        image: projectIotDashboard,
+        figmaLink: "#",
+        liveLink: "https://dribbble.com/mkfaruq",
+        problem: "Operations teams spent excessive time navigating between multiple screens to monitor device health, leading to delayed response times when issues occurred. The existing dashboard lacked clear data hierarchy and real-time alerts.",
+        role: [
+            "Redesigned information architecture for faster insights",
+            "Created data visualization components for real-time metrics",
+            "Designed alert system UX for critical device failures",
+            "Established design system for consistent dashboard components",
+        ],
+        process: [
+            { step: "Discovery", description: "Shadowed operations team to understand monitoring workflows and pain points" },
+            { step: "Research", description: "Mapped user journeys and identified high-frequency actions" },
+            { step: "Wireframing", description: "Restructured dashboard layout with priority-based information hierarchy" },
+            { step: "Design", description: "Created clear data visualizations with color-coded status indicators" },
+            { step: "Testing", description: "A/B tested new layout with operations team over 2-week period" },
+            { step: "Delivery", description: "Provided component library and interaction specifications" },
+        ],
+        outcomes: [
+            { metric: "Alert Response Time", result: "Reduced by 50%" },
+            { metric: "Daily Screen Switches", result: "-60% reduction" },
+            { metric: "Team Productivity", result: "+25% increase" },
+        ],
+    },
+    {
+        id: "post-office",
+        title: "Post Office Mail Booking System",
+        subtitle: "Government Digital Transformation",
+        description: "Redesigned using Interaction Design principles and Responsive Design, reducing user clicks and task time.",
+        tags: ["Government Service System", "Web App", "UX Research"],
+        domain: "Government Service System",
+        image: projectPostOffice,
+        figmaLink: "#",
+        liveLink: "#",
+        problem: "Citizens faced long wait times and confusing paper-based processes when booking mail services. The digital system needed to simplify complex government workflows while maintaining compliance requirements.",
+        role: [
+            "Led UX research and service design initiatives",
+            "Simplified multi-step booking process",
+            "Designed responsive web interface for all devices",
+            "Created accessibility-compliant components",
+        ],
+        process: [
+            { step: "Discovery", description: "Conducted field research at 3 post office locations" },
+            { step: "Research", description: "Mapped existing paper-based workflow and identified bottlenecks" },
+            { step: "Wireframing", description: "Designed streamlined 3-step booking flow from 8-step original" },
+            { step: "Design", description: "Created government-compliant UI with clear visual hierarchy" },
+            { step: "Testing", description: "Tested with diverse user group including elderly citizens" },
+            { step: "Delivery", description: "Provided fully responsive designs with accessibility documentation" },
+        ],
+        outcomes: [
+            { metric: "Booking Time", result: "From 15min to 4min" },
+            { metric: "User Errors", result: "-70% reduction" },
+            { metric: "Online Adoption", result: "+85% increase" },
+        ],
+    },
+    {
+        id: "ibanker",
+        title: "iBanker – AML Dashboard",
+        subtitle: "Anti-Money Laundering Cloud Platform",
+        description: "Anti-Money Laundering Cloud Dashboard with accessible, user-focused interfaces that improved task completion rates.",
+        tags: ["Anti-Money Laundering Monitoring System", "Dashboard", "Cloud"],
+        domain: "Anti-Money Laundering Monitoring System",
+        image: projectIbanker,
+        figmaLink: "#",
+        liveLink: "#",
+        problem: "Compliance analysts struggled with overwhelming data volumes and complex workflows when investigating potential money laundering cases. The existing system had poor usability scores and high training costs for new analysts.",
+        role: [
+            "Redesigned case investigation workflow",
+            "Created intuitive data visualization for transaction patterns",
+            "Designed collaborative features for team investigations",
+            "Established fintech-compliant design patterns",
+        ],
+        process: [
+            { step: "Discovery", description: "Interviewed 12 compliance analysts across 3 financial institutions" },
+            { step: "Research", description: "Analyzed industry regulations and competitor solutions" },
+            { step: "Wireframing", description: "Designed investigation workflow with smart prioritization" },
+            { step: "Design", description: "Created data-dense interface with progressive disclosure patterns" },
+            { step: "Testing", description: "Conducted task-based usability testing with compliance teams" },
+            { step: "Delivery", description: "Delivered comprehensive UI kit and interaction documentation" },
+        ],
+        outcomes: [
+            { metric: "Case Resolution Time", result: "-45% faster" },
+            { metric: "Training Time", result: "Reduced by 60%" },
+            { metric: "Task Completion Rate", result: "+40% improvement" },
+        ],
+    },
+];

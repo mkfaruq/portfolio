@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send, Dribbble, Linkedin, Facebook, MessageCircle, Mail } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useToast } from "@/hooks/use-toast";
+import { motion, Variants } from "framer-motion";
 
 // Get your free access key at https://web3forms.com
 const WEB3FORMS_ACCESS_KEY = "4f67ed2a-2d6a-4684-aef9-591aa9885420";
@@ -22,8 +22,29 @@ const budgetRanges = [
   "$5,000+",
 ];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+    },
+  },
+};
+
 const ContactSection = () => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -96,23 +117,33 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      ref={ref as React.RefObject<HTMLElement>}
       className="py-24 px-6 scroll-mt-20"
     >
       <div className="max-w-4xl mx-auto">
-        <div className={`text-center mb-12 transition-all duration-[1500ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <p className={`text-accent font-medium tracking-wide uppercase text-sm mb-3 transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '150ms' : '0ms' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-12"
+        >
+          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
             Get in Touch
           </p>
-          <h2 className={`text-4xl md:text-5xl font-display font-bold mb-4 transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '300ms' : '0ms' }}>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Let's Work Together
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             Tell me about your project — I reply within 24 hours.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={`bg-card rounded-2xl p-8 border border-border transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`} style={{ transitionDelay: isVisible ? '400ms' : '0ms' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="glass-card rounded-2xl p-8"
+        >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
@@ -206,63 +237,54 @@ const ContactSection = () => {
               />
             </div>
 
-            <button
+            <motion.button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-medium rounded-xl btn-3d glow-accent hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-medium rounded-xl btn-3d glow-accent disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <Send size={20} />
               {isSubmitting ? "Sending..." : "Send Project Details"}
-            </button>
+            </motion.button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Social links */}
-        <div className={`flex flex-wrap items-center justify-center gap-4 mt-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '600ms' }}>
-          <a 
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="flex flex-wrap items-center justify-center gap-4 mt-12"
+        >
+          <motion.a
+            variants={itemVariants}
             href="mailto:mkfaruqhossain@gmail.com"
             className="flex items-center gap-2 px-5 py-3 bg-accent/90 text-accent-foreground rounded-full transition-all duration-300 btn-3d btn-sweep"
           >
             <Mail size={18} />
             <span className="text-sm font-medium">Email Me</span>
-          </a>
-          <a 
-            href="https://dribbble.com/mkfaruq" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <Dribbble size={18} />
-            <span className="text-sm font-medium">Dribbble</span>
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/mkfaruq" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <Linkedin size={18} />
-            <span className="text-sm font-medium">LinkedIn</span>
-          </a>
-          <a 
-            href="https://www.facebook.com/faruq41" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <Facebook size={18} />
-            <span className="text-sm font-medium">Facebook</span>
-          </a>
-          <a 
-            href="https://wa.me/8801750005162" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
-          >
-            <MessageCircle size={18} />
-            <span className="text-sm font-medium">WhatsApp</span>
-          </a>
-        </div>
+          </motion.a>
+          {[
+            { href: "https://dribbble.com/mkfaruq", icon: Dribbble, label: "Dribbble" },
+            { href: "https://www.linkedin.com/in/mkfaruq", icon: Linkedin, label: "LinkedIn" },
+            { href: "https://www.facebook.com/faruq41", icon: Facebook, label: "Facebook" },
+            { href: "https://wa.me/8801750005162", icon: MessageCircle, label: "WhatsApp" },
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              variants={itemVariants}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-secondary text-secondary-foreground rounded-full transition-all duration-300 btn-3d btn-sweep hover:text-accent-foreground"
+            >
+              <social.icon size={18} />
+              <span className="text-sm font-medium">{social.label}</span>
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

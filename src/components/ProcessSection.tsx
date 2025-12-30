@@ -47,7 +47,7 @@ const ProcessSection = () => {
                   className={`flex flex-col items-center text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                   style={{ transitionDelay: isVisible ? `${(index + 1) * 200}ms` : '0ms' }}
                 >
-                  <div className="relative z-10 w-24 h-24 rounded-2xl bg-card border border-border flex items-center justify-center mb-4 group hover:border-accent hover:shadow-glow transition-all duration-300">
+                  <div className="relative z-10 w-24 h-24 rounded-2xl glass-card flex items-center justify-center mb-4 group hover:border-accent hover:shadow-glow transition-all duration-300">
                     <Icon size={32} className="text-accent" />
                     <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent text-accent-foreground text-xs font-bold flex items-center justify-center">
                       {index + 1}

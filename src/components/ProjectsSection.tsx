@@ -1,93 +1,87 @@
+import ImageWithSkeleton from "@/components/ui/image-with-skeleton";
 import { ExternalLink, Figma, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import projectBongoSource from "@/assets/project-bongo-source.jpg";
-import projectIotDashboard from "@/assets/project-iot-dashboard.jpg";
-import projectPostOffice from "@/assets/project-post-office.jpg";
-import projectIbanker from "@/assets/project-ibanker.jpg";
+import { motion, Variants } from "framer-motion";
+import { projects } from "@/data/projects";
 
-const projects = [
-  {
-    id: "bongo-source",
-    title: "Bongo Source",
-    description: "B2B Marketplace App designed using Material Design patterns and user-centered flows, optimizing buyer-seller interactions.",
-    tags: ["B2B Marketplace App", "Mobile App", "Material Design"],
-    domain: "B2B Marketplace App",
-    image: projectBongoSource,
-    figmaLink: "#",
-    liveLink: "#",
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
   },
-  {
-    id: "iot-dashboard",
-    title: "IoT System Monitoring Dashboard",
-    description: "Enhanced dashboard through clear data visualization, improved information architecture, and intuitive layouts.",
-    tags: ["IoT Monitoring Platform", "Data Visualization", "Dashboard"],
-    domain: "IoT Monitoring Platform",
-    image: projectIotDashboard,
-    figmaLink: "#",
-    liveLink: "https://dribbble.com/mkfaruq",
+};
+
+const cardVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+    },
   },
-  {
-    id: "post-office",
-    title: "Post Office Mail Booking System",
-    description: "Redesigned using Interaction Design principles and Responsive Design, reducing user clicks and task time.",
-    tags: ["Government Service System", "Web App", "UX Research"],
-    domain: "Government Service System",
-    image: projectPostOffice,
-    figmaLink: "#",
-    liveLink: "#",
-  },
-  {
-    id: "ibanker",
-    title: "iBanker – AML Dashboard",
-    description: "Anti-Money Laundering Cloud Dashboard with accessible, user-focused interfaces that improved task completion rates.",
-    tags: ["Anti-Money Laundering Monitoring System", "Dashboard", "Cloud"],
-    domain: "Anti-Money Laundering Monitoring System",
-    image: projectIbanker,
-    figmaLink: "#",
-    liveLink: "#",
-  },
-];
+};
 
 const ProjectsSection = () => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 });
-
   return (
-    <section 
-      id="projects" 
-      ref={ref as React.RefObject<HTMLElement>}
+    <section
+      id="projects"
       className="py-24 px-6 bg-secondary/10 scroll-mt-20"
     >
       <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-[1500ms] ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
-          <p className={`text-accent font-medium tracking-wide uppercase text-sm mb-3 transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '150ms' : '0ms' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-16"
+        >
+          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-3">
             Portfolio
           </p>
-          <h2 className={`text-4xl md:text-5xl font-display font-bold transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: isVisible ? '300ms' : '0ms' }}>
+          <h2 className="text-4xl md:text-5xl font-display font-bold">
             Selected Projects
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid md:grid-cols-2 gap-8"
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`transition-[opacity,transform] duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"}`}
-              style={{ transitionDelay: isVisible ? `${(index + 1) * 150}ms` : "0ms" }}
+              variants={cardVariants}
             >
-              <div className="group bg-card rounded-2xl overflow-hidden shadow-soft border border-border hover:shadow-glow hover:-translate-y-2 transition-[transform,box-shadow] duration-150 ease-out">
+              <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-glow hover:-translate-y-2 transition-[transform,box-shadow] duration-300 ease-out h-full flex flex-col">
                 {/* Project image */}
                 <div className="h-52 overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-150 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100">
+                    <Link
+                      to={`/case-study/${project.id}`}
+                      className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors w-full justify-center shadow-lg"
+                    >
+                      <FileText size={16} />
+                      View Case Study
+                    </Link>
+                  </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
                       {project.domain}
@@ -102,41 +96,34 @@ const ProjectsSection = () => {
                     ))}
                   </div>
 
-                  <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-accent transition-colors duration-150">
+                  <h3 className="text-xl font-display font-semibold mb-2 group-hover:text-accent transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-4 pt-4 border-t border-white/10 mt-auto">
                     <a
                       href={project.figmaLink}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-150"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-200"
                     >
                       <Figma size={16} />
                       Figma
                     </a>
                     <a
                       href={project.liveLink}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-150"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
                       View
                     </a>
-                    <Link
-                      to={`/case-study/${project.id}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 bg-accent/10 text-accent rounded-full hover:bg-accent hover:text-accent-foreground transition-colors duration-150"
-                    >
-                      <FileText size={16} />
-                      View Case Study
-                    </Link>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

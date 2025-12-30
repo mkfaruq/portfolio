@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "#skills", label: "Skills" },
@@ -35,11 +36,14 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-soft"
-          : "bg-transparent"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -101,23 +105,34 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 animate-fade-in">
-            <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-left py-3 px-4 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary font-medium transition-all"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="md:hidden overflow-hidden"
+            >
+              <div className="pb-6 pt-2 flex flex-col gap-2">
+                {navLinks.map((link, index) => (
+                  <motion.button
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    key={link.href}
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-left py-3 px-4 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary font-medium transition-all"
+                  >
+                    {link.label}
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

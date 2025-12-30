@@ -33,7 +33,7 @@ const ImpactSection = () => {
             return (
               <div
                 key={index}
-                className={`group bg-card rounded-2xl p-8 border border-border text-center hover:shadow-glow hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group glass-card rounded-2xl p-8 text-center hover:shadow-glow hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: isVisible ? `${(index + 1) * 150}ms` : '0ms' }}
               >
                 <div className="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center text-accent mx-auto mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">

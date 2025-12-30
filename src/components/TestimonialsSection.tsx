@@ -42,14 +42,14 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`group bg-card rounded-2xl p-8 border border-border hover:shadow-glow hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+              className={`group glass-card rounded-2xl p-8 hover:shadow-glow hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
               style={{ transitionDelay: isVisible ? `${(index + 1) * 150}ms` : '0ms' }}
             >
-              <Quote size={32} className="text-accent/30 mb-4" />
+              <Quote size={32} className="text-secondary/50 mb-4 group-hover:text-accent/50 transition-colors" />
               <p className="text-foreground leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
-              <div className="border-t border-border pt-4">
+              <div className="border-t border-white/10 pt-4">
                 <p className="font-display font-semibold text-sm">
                   — {testimonial.author}
                 </p>
