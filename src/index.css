@@ -24,8 +24,8 @@
     --muted: 220 15% 92%;
     --muted-foreground: 220 15% 45%;
 
-    --accent: 220 20% 20%;
-    /* Slate Black Accent */
+    --accent: 220 70% 60%;
+    /* Blue Accent (Consistent with Dark Mode) */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 220 20% 85%;
     --input: 220 20% 85%;
-    --ring: 220 20% 20%;
+    --ring: 220 70% 60%;
 
     --radius: 0.75rem;
 

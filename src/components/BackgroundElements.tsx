@@ -18,16 +18,34 @@ const sourceIcons = [
 ];
 
 // Generate a dense field of icons - increased to 90 for full scroll coverage
+// Generate a structured grid of icons to prevent clumping
 const generateIcons = (count: number) => {
+  const columns = 8; // Divides screen into 8 vertical columns
+  const rows = Math.ceil(count / columns); // Calculates needed rows
+
   return Array.from({ length: count }).map((_, i) => {
     const Icon = sourceIcons[i % sourceIcons.length];
+
+    // Grid-based positioning to ensure even coverage
+    const col = i % columns;
+    const row = Math.floor(i / columns);
+
+    // Calculate cell dimensions
+    const cellWidth = 100 / columns;
+    const cellHeight = 100 / rows;
+
+    // Position with random jitter within the cell
+    // We add margin (10% of cell) to avoid edge overlaps
+    const x = (col * cellWidth) + (Math.random() * (cellWidth * 0.8)) + (cellWidth * 0.1);
+    const y = (row * cellHeight) + (Math.random() * (cellHeight * 0.8)) + (cellHeight * 0.1);
+
     return {
       id: i,
       Icon,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
+      x,
+      y,
       size: 24 + Math.random() * 40,
-      opacity: 0.1 + Math.random() * 0.1, // Increased opacity to 10-20% as requested
+      opacity: 0.02 + Math.random() * 0.02, // Adjusted opacity to 2-4% as requested
       rotationDir: Math.random() > 0.5 ? 1 : -1,
       floatDuration: 10 + Math.random() * 20,
       floatDelay: Math.random() * 10,
@@ -35,7 +53,7 @@ const generateIcons = (count: number) => {
   });
 };
 
-const backgroundIcons = generateIcons(90);
+const backgroundIcons = generateIcons(256); // 8 cols * 32 rows = 256 icons
 
 const BackgroundElements = () => {
   const mouseX = useMotionValue(0);
