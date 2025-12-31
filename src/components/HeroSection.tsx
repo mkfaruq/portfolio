@@ -124,7 +124,7 @@ const HeroSection = () => {
                 href="#projects"
                 className="inline-flex items-center gap-3 text-foreground font-medium group"
               >
-                <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <ArrowDown size={18} className="animate-bounce" />
                 </span>
                 <span className="group-hover:text-accent transition-colors">View Case Studies</span>
