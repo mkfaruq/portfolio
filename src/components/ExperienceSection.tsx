@@ -5,14 +5,14 @@ const experiences = [
   {
     title: "UI/UX Engineer",
     company: "SmartThink",
-    period: "Jul 2024 - Present",
+    period: "2024 - Present",
     description: "Spearheaded the UX overhaul of an IoT Monitoring Dashboard, reducing alert response times by 50%. Established a scalable Design System used by 3+ engineering squads.",
     current: true,
   },
   {
     title: "Visual & Product Designer",
     company: "Prime IT",
-    period: "Dec 2017 - Mar 2019",
+    period: "2017 - 2019",
     description: "Owned the end-to-end visual language for manufacturing workflows. Reduced design-to-production handoff time by 30% through improved asset pipelines.",
     current: false,
   },

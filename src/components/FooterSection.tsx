@@ -42,7 +42,7 @@ const FooterSection = () => {
               FH<span className="text-accent">.</span>
             </Link>
             <p className="text-muted-foreground leading-relaxed max-w-md mx-auto">
-              Product UI/UX Designer crafting digital experiences with purpose and precision. Specialized in SaaS, Dashboards, and Complex Systems.
+              UI/UX Designer crafting digital experiences with purpose and precision. Specialized in SaaS, Dashboards, and Complex Systems.
             </p>
             <div className="flex gap-4 justify-center">
               {[

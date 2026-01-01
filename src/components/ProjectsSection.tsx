@@ -59,26 +59,18 @@ const ProjectsSection = () => {
               key={index}
               variants={cardVariants}
             >
-              <div className="group glass-card rounded-2xl overflow-hidden hover:shadow-glow hover:-translate-y-2 transition-[transform,box-shadow] duration-300 ease-out h-full flex flex-col">
+              <div className="group glass-card rounded-2xl overflow-hidden md:hover:shadow-glow md:hover:-translate-y-2 transition-[transform,box-shadow] duration-300 ease-out h-full flex flex-col">
                 {/* Project image */}
                 <div className="h-52 overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                    <Link
-                      to={`/case-study/${project.id}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full hover:bg-white/20 transition-colors w-full justify-center shadow-lg"
-                    >
-                      <FileText size={16} />
-                      View Case Study
-                    </Link>
-                  </div>
+
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
@@ -103,21 +95,34 @@ const ProjectsSection = () => {
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-white/10 mt-auto">
-                    <a
-                      href={project.figmaLink}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-200"
+                  <div className="flex items-center gap-3 pt-4 border-t border-white/10 mt-auto flex-wrap">
+                    <Link
+                      to={`/case-study/${project.id}`}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground text-sm font-medium rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
                     >
-                      <Figma size={16} />
-                      Figma
-                    </a>
-                    <a
-                      href={project.liveLink}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-accent transition-colors duration-200"
-                    >
-                      <ExternalLink size={16} />
-                      View
-                    </a>
+                      <FileText size={16} />
+                      View Case Study
+                    </Link>
+                    <div className="flex items-center gap-2 ml-auto">
+                      <a
+                        href={project.figmaLink}
+                        className="inline-flex items-center gap-2 px-3 py-2 bg-secondary/50 hover:bg-secondary text-secondary-foreground text-xs font-medium rounded-full transition-colors border border-transparent hover:border-border/50"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Figma size={14} />
+                        Figma
+                      </a>
+                      <a
+                        href={project.liveLink}
+                        className="inline-flex items-center gap-2 px-3 py-2 bg-secondary/50 hover:bg-secondary text-secondary-foreground text-xs font-medium rounded-full transition-colors border border-transparent hover:border-border/50"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink size={14} />
+                        View
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

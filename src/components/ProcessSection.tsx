@@ -54,7 +54,7 @@ const ProcessSection = () => {
                     </span>
                   </div>
                   <h3 className="font-display font-semibold mb-1">{step.label}</h3>
-                  <p className="text-xs text-muted-foreground">{step.description}</p>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
               );
             })}

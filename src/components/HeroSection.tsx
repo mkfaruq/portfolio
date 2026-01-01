@@ -62,23 +62,29 @@ const HeroSection = () => {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-work-sans font-bold leading-tight mb-4 relative z-10"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-2 relative z-10"
             >
-              <span className="text-gradient animate-gradient-shift inline-block overflow-hidden whitespace-nowrap animate-typewriter border-r-2 border-accent pb-2">
-                Product UI/UX Designer
+              <span className="text-gradient animate-gradient-shift inline-block overflow-hidden pb-2">
+                Faruq Hossain
               </span>
             </motion.h1>
+            <motion.h2
+              variants={itemVariants}
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-bold leading-tight mb-6 relative z-10 w-fit"
+            >
+              <span className="text-gradient animate-gradient-shift inline-block overflow-hidden whitespace-nowrap animate-typewriter border-r-2 border-accent pb-2">UI/UX Designer</span>
+            </motion.h2>
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl lg:text-2xl font-medium mb-6"
+              className="text-lg md:text-xl lg:text-2xl font-medium mb-6 max-w-xl"
             >
-              Specialized in SaaS Dashboards, Web & Mobile Applications and Complex Platforms
+              I design user-centered SaaS dashboards, web and mobile applications that simplify complex systems into clean, usable experiences.
             </motion.p>
             <motion.p
               variants={itemVariants}
-              className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed"
+              className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed"
             >
-              2+ years of experience designing data-driven web and mobile products - including government service platforms, IoT & anti money laundering monitoring systems, B2B business platform.
+              Experienced in delivering production-ready interfaces for government service platforms, IoT monitoring dashboards, B2B marketplaces and fintech solutions — collaborating closely with developers to turn ideas into real products.
             </motion.p>
 
             {/* Social links */}
@@ -118,7 +124,7 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
                 <FileDown size={20} strokeWidth={2} />
-                Download Resume
+                View Resume
               </a>
               <a
                 href="#projects"
@@ -127,7 +133,7 @@ const HeroSection = () => {
                 <span className="w-12 h-12 rounded-full border-2 border-foreground/30 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <ArrowDown size={18} className="animate-bounce" />
                 </span>
-                <span className="group-hover:text-accent transition-colors">View Case Studies</span>
+                <span className="group-hover:text-accent transition-colors">Explore My Work</span>
               </a>
             </motion.div>
           </motion.div>

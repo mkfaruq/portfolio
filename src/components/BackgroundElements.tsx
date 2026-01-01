@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion, useSpring, useTransform, useMotionValue } from "framer-motion";
 import {
   CodeCircleLinear, FigmaLinear, PenNewSquareLinear, SmartphoneLinear, MonitorLinear,
@@ -7,6 +7,7 @@ import {
   MusicNoteLinear, CameraLinear, GalleryLinear, GamepadLinear,
   HashtagLinear, HeartLinear, LockLinear, KeyLinear
 } from "solar-icon-set";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // Extended icon set (strictly verified)
 const sourceIcons = [
@@ -53,17 +54,26 @@ const generateIcons = (count: number) => {
   });
 };
 
-const backgroundIcons = generateIcons(256); // 8 cols * 32 rows = 256 icons
-
 const BackgroundElements = () => {
+  const isMobile = useIsMobile();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+
+  // Optimize: Reduce counts significantly for mobile
+  // Desktop: 192 (reduced from 256 for better performance even on laptops)
+  // Mobile: 40 (enough to look populated but not kill the battery/cpu)
+  const iconCount = isMobile ? 40 : 192;
+
+  const backgroundIcons = useMemo(() => generateIcons(iconCount), [iconCount]);
 
   const springConfig = { damping: 20, stiffness: 100, mass: 0.5 };
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
+    // Optimization: Disable mouse tracking on mobile completely
+    if (isMobile) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.pageX); // Use pageX/Y for absolute positioning relative to document
       mouseY.set(e.pageY);
@@ -71,7 +81,7 @@ const BackgroundElements = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isMobile]);
 
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
@@ -98,6 +108,7 @@ const BackgroundElements = () => {
           smoothX={smoothX}
           smoothY={smoothY}
           windowSize={windowSize}
+          isMobile={isMobile}
         />
       ))}
     </div>
@@ -108,31 +119,46 @@ const FloatingIcon = ({
   item,
   smoothX,
   smoothY,
-  windowSize
+  windowSize,
+  isMobile
 }: {
   item: any,
   smoothX: any,
   smoothY: any,
-  windowSize: { width: number, height: number }
+  windowSize: { width: number, height: number },
+  isMobile: boolean
 }) => {
 
   const initialX = windowSize.width * (item.x / 100);
   const initialY = windowSize.height * (item.y / 100);
 
-  // Magnetic Pull
+  // Magnetic Pull - Only strictly active if not mobile and if tracking is enabled
+  // But we can just use the transform always, if smoothX/Y are 0 it won't move much compared to mouse.
+  // Ideally we disable the hook calculation if mobile.
+
   const x = useTransform(smoothX, (currentMouseX) => {
+    if (isMobile) return 0;
     const deltaX = currentMouseX - initialX;
     const attractionStrength = (item.size / 64) * 0.15;
     return deltaX * attractionStrength;
   });
 
   const y = useTransform(smoothY, (currentMouseY) => {
+    if (isMobile) return 0;
     const deltaY = currentMouseY - initialY;
     const attractionStrength = (item.size / 64) * 0.15;
     return deltaY * attractionStrength;
   });
 
   const floatDuration = item.floatDuration;
+
+  // Optimization: Remove standard drop-shadow for mobile, it's very expensive
+  // Keep it for desktop as requested, or maybe make it lighter.
+  // The original was: filter: 'drop-shadow(0 0 10px rgba(139, 92, 246, 0.1))'
+  const iconStyle = {
+    filter: isMobile ? 'none' : 'drop-shadow(0 0 10px rgba(139, 92, 246, 0.1))',
+    willChange: 'transform' // Hint to browser to promote to layer
+  };
 
   return (
     // Outer motion div handles positioning and magnetic pull
@@ -178,7 +204,7 @@ const FloatingIcon = ({
           <item.Icon
             size={item.size}
             iconStyle="Linear"
-            style={{ filter: 'drop-shadow(0 0 10px rgba(139, 92, 246, 0.1))' }}
+            style={iconStyle}
           />
         </div>
       </motion.div>

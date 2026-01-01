@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Sora', 'system-ui', 'sans-serif'],
+        display: ['Work Sans', 'system-ui', 'sans-serif'],
         'work-sans': ['Work Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
