@@ -118,7 +118,7 @@ const HeroSection = () => {
               className="flex flex-wrap items-center gap-4"
             >
               <a
-                href="/Faruq_Hossain_Resume.pdf"
+                href="Faruq_Hossain_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
