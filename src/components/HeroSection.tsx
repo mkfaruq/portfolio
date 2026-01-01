@@ -1,4 +1,4 @@
-import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, FileDown, Mail } from "lucide-react";
+import { ArrowDown, Dribbble, Facebook, Linkedin, MessageCircle, Eye, Mail } from "lucide-react";
 import profileImage from "@/assets/profile-new.jpg";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { useRef } from "react";
@@ -123,7 +123,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/90 text-accent-foreground font-medium rounded-full btn-3d glow-accent btn-sweep"
               >
-                <FileDown size={20} strokeWidth={2} />
+                <Eye size={20} strokeWidth={2} />
                 View Resume
               </a>
               <a
